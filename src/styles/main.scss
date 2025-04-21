@@ -1,0 +1,240 @@
+@use 'sass:color';
+@use 'sass:math';
+@use './variables' as *;
+@use './mixins' as *;
+
+// Importar componentes y páginas
+@use './components/navbar';
+@use './components/footer';
+@use './pages/home';
+@use './pages/about';
+@use './pages/affiliation';
+@use './pages/documents';
+@use './pages/news';
+@use './pages/contact';
+
+// Reset básico y estilos globales
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; // Prevenir scroll horizontal
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: $gray-dark;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Contenedor principal que contiene todo el sitio
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+// Contenido principal
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding-top: 80px; // Ajustar según la altura de la navbar
+  
+  @include responsive(md) {
+    padding-top: 90px;
+  }
+}
+
+// Contenedor de sección global
+.section {
+  width: 100%;
+  padding: $spacing-xl 0;
+  
+  @include responsive(xl) {
+    padding: $spacing-2xl 0;
+  }
+  
+  &__container {
+    @include responsive-container;
+  }
+}
+
+// Banner y Page-banner
+.banner, .page-banner {
+  @include full-width;
+  padding: $spacing-xl 0;
+  color: $white;
+  text-align: center;
+  
+  @include responsive(xl) {
+    padding: $spacing-2xl 0;
+  }
+  
+  &__container {
+    @include responsive-container;
+  }
+  
+  &__title {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-md;
+    
+    @include responsive(xl) {
+      font-size: $font-size-3xl;
+    }
+  }
+  
+  &__text {
+    font-size: $font-size-md;
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    
+    @include responsive(xl) {
+      font-size: $font-size-lg;
+      max-width: 1000px;
+    }
+  }
+}
+
+.banner {
+  background: linear-gradient(90deg, $verde-claro, $naranja-oscuro);
+}
+
+.page-banner {
+  background: linear-gradient(90deg, $verde-oscuro, $verde-claro);
+}
+
+// CTA Section
+.cta {
+  @include full-width;
+  @include gradient;
+  padding: $spacing-xl 0;
+  color: $white;
+  text-align: center;
+  
+  @include responsive(xl) {
+    padding: $spacing-2xl 0;
+  }
+  
+  &__container {
+    @include responsive-container;
+    max-width: 1000px;
+  }
+  
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    
+    @include responsive(xl) {
+      font-size: $font-size-2xl;
+    }
+  }
+  
+  &__text {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-lg;
+    
+    @include responsive(xl) {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// Botones
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius-md;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all $transition-fast;
+  
+  @include responsive(xl) {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-md;
+  }
+  
+  &--primary {
+    background-color: $verde-claro;
+    color: $white;
+    
+    &:hover {
+      background-color: color.adjust($verde-claro, $lightness: -10%);
+    }
+  }
+  
+  &--secondary {
+    background-color: $naranja-claro;
+    color: $white;
+    
+    &:hover {
+      background-color: color.adjust($naranja-claro, $lightness: -10%);
+    }
+  }
+  
+  &--light {
+    background-color: $white;
+    color: $verde-oscuro;
+    
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+  
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $verde-claro;
+    color: $verde-claro;
+    
+    &:hover {
+      background-color: $verde-claro;
+      color: $white;
+    }
+  }
+  
+  &--sm {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+  }
+}
+
+// Grid responsivo
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-md;
+  width: 100%;
+  
+  @include responsive(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include responsive(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+  }
+  
+  @include responsive(xl) {
+    gap: $spacing-xl;
+  }
+}
+
+// Importación de fuentes
+@font-face {
+  font-family: 'Virgo 01';
+  src: url('/fonts/virgo01/Virgo01-Regular.woff2') format('woff2'),
+       url('/fonts/virgo01/Virgo01-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

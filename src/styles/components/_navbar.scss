@@ -1,0 +1,138 @@
+@use 'sass:color';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; // Asegurar que ocupe todo el ancho
+  background-color: $white;
+  box-shadow: $shadow-sm;
+  z-index: 1000;
+  
+  &__container {
+    @include responsive-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    
+    img {
+      height: 50px;
+      width: auto;
+      
+      @include responsive(md) {
+        height: 60px;
+      }
+      
+      @include responsive(lg) {
+        height: 70px;
+      }
+    }
+  }
+  
+  &__menu {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: $breakpoint-md) {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: $white;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: $spacing-lg;
+      transition: all $transition-normal;
+      
+      &.active {
+        left: 0;
+      }
+    }
+  }
+  
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  
+  &__item {
+    margin: 0 $spacing-sm;
+    
+    @media (max-width: $breakpoint-md) {
+      margin: $spacing-sm 0;
+      width: 100%;
+    }
+  }
+  
+  &__link {
+    display: block;
+    padding: $spacing-sm;
+    color: $gray-dark;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-fast;
+    position: relative;
+    
+    &:hover {
+      color: $verde-claro;
+    }
+    
+    &.active {
+      color: $verde-claro;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $verde-claro;
+      }
+    }
+    
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-md;
+      width: 100%;
+      
+      &.active::after {
+        display: none;
+      }
+    }
+  }
+  
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+    }
+  }
+  
+  &__bar {
+    width: 25px;
+    height: 3px;
+    background-color: $gray-dark;
+    margin: 2px 0;
+    transition: $transition-fast;
+  }
+}

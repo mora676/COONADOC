@@ -1,0 +1,453 @@
+// Importar variables y mixins
+@use 'sass:color';
+@use 'sass:math';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Estilos para la página de Contacto y Soporte
+
+// Sección de Información de Contacto
+.contact-info {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    
+    @include responsive(lg) {
+      flex-direction: row;
+    }
+  }
+  
+  &__methods {
+    flex: 1;
+  }
+  
+  &__text {
+    max-width: 800px;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__item {
+    @include card;
+    display: flex;
+    align-items: flex-start;
+    padding: $spacing-md;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  &__icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: rgba($verde-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-md;
+    
+    i {
+      font-size: 1.25rem;
+      color: $verde-claro;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__details {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+    
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+      transition: color $transition-fast;
+      
+      &:hover {
+        color: $verde-claro;
+      }
+    }
+  }
+  
+  &__social {
+    margin-top: $spacing-lg;
+  }
+  
+  &__social-title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-md;
+    color: $verde-oscuro;
+  }
+  
+  &__social-links {
+    display: flex;
+    gap: $spacing-sm;
+  }
+  
+  &__social-link {
+    width: 40px;
+    height: 40px;
+    background-color: rgba($verde-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $verde-oscuro;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: $verde-claro;
+      color: $white;
+      transform: translateY(-3px);
+    }
+  }
+  
+  &__map {
+    flex: 1;
+    min-height: 300px;
+    
+    iframe {
+      height: 100%;
+      width: 100%;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+    }
+    
+    @include responsive(lg) {
+      min-height: auto;
+    }
+  }
+}
+
+// Sección de Formulario de Contacto
+.contact-form-section {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    
+    @include responsive(md) {
+      flex-direction: row;
+    }
+  }
+  
+  &__info {
+    flex: 1;
+    
+    @include responsive(md) {
+      max-width: 300px;
+    }
+  }
+  
+  &__whatsapp {
+    @include card;
+    padding: $spacing-md;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+  }
+  
+  &__email {
+    @include card;
+    padding: $spacing-md;
+    text-align: center;
+  }
+  
+  &__subtitle {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-sm;
+    color: $verde-oscuro;
+  }
+  
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__mail-link {
+    display: inline-flex;
+    align-items: center;
+    color: $naranja-oscuro;
+    text-decoration: none;
+    font-weight: 500;
+    
+    i {
+      margin-right: $spacing-xs;
+    }
+    
+    &:hover {
+      color: $verde-claro;
+    }
+  }
+}
+
+// Formulario de Contacto
+.contact-form {
+  flex: 2;
+  @include card;
+  padding: $spacing-lg;
+  
+  &__alert {
+    display: flex;
+    align-items: flex-start;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-md;
+    
+    i {
+      margin-right: $spacing-sm;
+      font-size: 1.25rem;
+    }
+    
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+    }
+    
+    &.success {
+      background-color: rgba(#28a745, 0.1);
+      color: #28a745;
+    }
+    
+    &.error {
+      background-color: rgba(#dc3545, 0.1);
+      color: #dc3545;
+    }
+  }
+  
+  &__group {
+    margin-bottom: $spacing-md;
+    
+    &.checkbox {
+      display: flex;
+      align-items: center;
+      
+      input {
+        margin-right: $spacing-xs;
+      }
+    }
+  }
+  
+  &__label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $gray-dark;
+  }
+  
+  &__checkbox-label {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+  }
+  
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid $gray;
+    border-radius: $border-radius-md;
+    font-size: $font-size-sm;
+    transition: border-color $transition-fast;
+    
+    &:focus {
+      outline: none;
+      border-color: $verde-claro;
+    }
+  }
+  
+  &__textarea {
+    resize: vertical;
+  }
+  
+  &__submit {
+    margin-top: $spacing-lg;
+    text-align: center;
+  }
+}
+
+// Sección de Preguntas Frecuentes
+.faq-section {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+  }
+  
+  &__item {
+    @include card;
+    overflow: hidden;
+  }
+  
+  &__question {
+    font-size: $font-size-md;
+    color: $verde-oscuro;
+    padding: $spacing-md;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color $transition-fast;
+    display: flex;
+    align-items: center;
+    
+    &:hover {
+      background-color: rgba($verde-claro, 0.05);
+    }
+    
+    i {
+      margin-right: $spacing-sm;
+      color: $verde-claro;
+    }
+  }
+  
+  &__answer {
+    padding: 0 $spacing-md $spacing-md;
+    
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: $gray-dark;
+    }
+  }
+  
+  &__more {
+    text-align: center;
+  }
+}
+
+// Sección de Oficinas
+.offices-section {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// Tarjeta de Oficina
+.office-card {
+  @include card;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform $transition-normal;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+  
+  &__content {
+    padding: $spacing-md;
+    flex: 1;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-sm;
+    color: $verde-oscuro;
+  }
+  
+  &__address,
+  &__phone,
+  &__hours {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin-bottom: $spacing-xs;
+    display: flex;
+    align-items: center;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    i {
+      margin-right: $spacing-xs;
+      color: $naranja-claro;
+    }
+  }
+  
+  &__image {
+    height: 150px;
+    
+    img {
+      @include responsive-image;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Botón de WhatsApp
+.btn--whatsapp {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366; // Color oficial de WhatsApp
+  color: $white;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-md;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color $transition-fast;
+  
+  i {
+    font-size: 1.25rem;
+    margin-right: $spacing-sm;
+  }
+  
+  &:hover {
+    background-color: color.adjust(#25D366, $lightness: -10%);
+  }
+}

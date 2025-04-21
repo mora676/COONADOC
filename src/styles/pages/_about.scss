@@ -1,0 +1,335 @@
+// Importar variables y mixins
+@use 'sass:color';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Estilos para la página Quiénes Somos
+
+// Banner de página
+.page-banner {
+  background: linear-gradient(90deg, $verde-oscuro, $verde-claro);
+  color: $white;
+  padding: $spacing-xl 0;
+  text-align: center;
+  
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+  
+  &__title {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__text {
+    font-size: $font-size-md;
+  }
+}
+
+// Sección Historia
+.history {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    @include responsive(lg) {
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-xl;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+    margin-bottom: $spacing-lg;
+    
+    @include responsive(lg) {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__text {
+    margin-bottom: $spacing-md;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__image {
+    flex: 1;
+    
+    img {
+      @include responsive-image;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+// Sección Misión y Visión
+.mission-vision {
+  background-color: $gray-light;
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    
+    @include responsive(md) {
+      flex-direction: row;
+    }
+  }
+  
+  &__box {
+    flex: 1;
+    @include card;
+    padding: $spacing-lg;
+    text-align: center;
+    transition: transform $transition-normal;
+    
+    &:hover {
+      transform: translateY(-10px);
+    }
+    
+    &.mission {
+      border-top: 5px solid $verde-claro;
+    }
+    
+    &.vision {
+      border-top: 5px solid $naranja-claro;
+    }
+  }
+  
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto $spacing-md;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .mission & {
+      background-color: rgba($verde-claro, 0.1);
+      
+      i {
+        color: $verde-claro;
+      }
+    }
+    
+    .vision & {
+      background-color: rgba($naranja-claro, 0.1);
+      
+      i {
+        color: $naranja-claro;
+      }
+    }
+    
+    i {
+      font-size: 2rem;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__text {
+    color: $gray-dark;
+  }
+}
+
+// Sección Valores
+.values {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__item {
+    @include card;
+    padding: $spacing-md;
+    display: flex;
+    align-items: center;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background-color: rgba($verde-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-md;
+    
+    i {
+      font-size: 1.5rem;
+      color: $verde-claro;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+  }
+}
+
+// Sección Documentos
+.documents {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+    text-align: center;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+  
+  &__item {
+    @include card;
+    display: flex;
+    align-items: center;
+    padding: $spacing-md;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background-color: rgba($naranja-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-lg;
+    
+    i {
+      font-size: 1.5rem;
+      color: $naranja-oscuro;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__desc {
+    margin-bottom: $spacing-sm;
+    color: $gray-dark;
+    font-size: $font-size-sm;
+  }
+}
+
+// Sección Equipo
+.team {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-lg;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  &__member {
+    @include card;
+    text-align: center;
+    padding-bottom: $spacing-md;
+    transition: transform $transition-normal;
+    
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  
+  &__photo {
+    margin-bottom: $spacing-md;
+    overflow: hidden;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+    
+    img {
+      @include responsive-image;
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__name {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__position {
+    font-size: $font-size-md;
+    color: $naranja-oscuro;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__desc {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    padding: 0 $spacing-md;
+    margin-bottom: 0;
+  }
+}

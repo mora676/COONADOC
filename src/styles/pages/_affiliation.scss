@@ -1,0 +1,477 @@
+// Importar variables y mixins
+@use 'sass:color';
+@use 'sass:math';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Estilos para la página de Afiliación y Servicios
+
+// Sección de Requisitos de Afiliación
+.affiliation-requirements {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__item {
+    @include card;
+    display: flex;
+    align-items: center;
+    padding: $spacing-md;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background-color: rgba($verde-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-md;
+    
+    i {
+      font-size: 1.5rem;
+      color: $verde-claro;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+  }
+  
+  &__action {
+    text-align: center;
+  }
+}
+
+// Sección Proceso de Afiliación
+.affiliation-process {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__steps {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50px;
+      width: 2px;
+      background-color: $verde-claro;
+      
+      @include responsive(md) {
+        left: 60px;
+      }
+    }
+  }
+  
+  &__step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    z-index: 1;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__step-number {
+    width: 40px;
+    height: 40px;
+    background-color: $verde-claro;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: $spacing-md;
+    box-shadow: $shadow-md;
+    z-index: 2;
+    
+    @include responsive(md) {
+      width: 50px;
+      height: 50px;
+      font-size: $font-size-lg;
+    }
+  }
+  
+  &__step-content {
+    background-color: $white;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    flex: 1;
+  }
+  
+  &__step-title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__step-text {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+  }
+}
+
+// Sección Tipos de Crédito
+.credit-types {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  &__item {
+    @include card;
+    padding: $spacing-md;
+    text-align: center;
+    transition: transform $transition-normal;
+    
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  
+  &__icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba($verde-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto $spacing-md;
+    
+    i {
+      font-size: 2rem;
+      color: $verde-claro;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-sm;
+    color: $verde-oscuro;
+  }
+  
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 $spacing-md;
+    text-align: left;
+    
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: $spacing-xs;
+      font-size: $font-size-sm;
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: $verde-claro;
+        font-weight: 700;
+      }
+    }
+  }
+  
+  &__link {
+    color: $naranja-oscuro;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $verde-claro;
+    }
+  }
+  
+  &__action {
+    text-align: center;
+  }
+}
+
+// Sección Seguros y Beneficios
+.insurance-benefits {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    
+    @include responsive(md) {
+      flex-direction: row;
+    }
+  }
+  
+  &__column {
+    flex: 1;
+  }
+  
+  &__subtitle {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    color: $verde-oscuro;
+    text-align: center;
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: $naranja-claro;
+      margin: $spacing-xs auto 0;
+    }
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    background-color: $white;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-md;
+    box-shadow: $shadow-sm;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    i {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background-color: rgba($verde-claro, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: $spacing-md;
+      color: $verde-claro;
+      font-size: $font-size-md;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__name {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__desc {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+  }
+}
+
+// Sección Convenios
+.agreements {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__item {
+    @include card;
+    padding: $spacing-md;
+    text-align: center;
+    transition: transform $transition-normal;
+    
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  
+  &__logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacing-md;
+    
+    img {
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  &__name {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__desc {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin: 0;
+  }
+  
+  &__more {
+    text-align: center;
+  }
+}
+
+// Sección Documentos Relevantes
+.relevant-documents {
+  background-color: $gray-light;
+  
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+  
+  &__item {
+    @include card;
+    display: flex;
+    align-items: center;
+    padding: $spacing-md;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background-color: rgba($naranja-claro, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-lg;
+    
+    i {
+      font-size: 1.5rem;
+      color: $naranja-oscuro;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__desc {
+    margin-bottom: $spacing-sm;
+    color: $gray-dark;
+    font-size: $font-size-sm;
+  }
+}

@@ -1,0 +1,426 @@
+// Importar variables y mixins
+@use 'sass:color';
+@use 'sass:math';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Estilos para la página de Noticias y Blog
+
+// Sección de Noticias
+.news-section {
+  &__filters {
+    margin-bottom: $spacing-lg;
+    text-align: center;
+  }
+  
+  &__filter-label {
+    font-weight: 500;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-md;
+    color: $verde-oscuro;
+  }
+  
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-xs;
+  }
+  
+  &__category {
+    padding: $spacing-xs $spacing-sm;
+    background-color: $gray-light;
+    border: 1px solid $gray;
+    border-radius: $border-radius-md;
+    font-size: $font-size-sm;
+    cursor: pointer;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: rgba($verde-claro, 0.1);
+      border-color: $verde-claro;
+    }
+    
+    &.active {
+      background-color: $verde-claro;
+      color: $white;
+      border-color: $verde-claro;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-lg;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: $spacing-xl;
+    background-color: $gray-light;
+    border-radius: $border-radius-md;
+    
+    i {
+      font-size: 3rem;
+      color: $gray;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-size: $font-size-md;
+      color: $gray-dark;
+      margin: 0;
+    }
+  }
+}
+
+// Tarjeta de Noticia
+.news-card {
+  @include card;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform $transition-normal;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+  
+  &__image {
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+      @include responsive-image;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__content {
+    padding: $spacing-md;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__date {
+    font-size: $font-size-xs;
+    color: $gray-dark;
+    margin-bottom: $spacing-xs;
+  }
+  
+  &__category {
+    display: inline-block;
+    padding: calc($spacing-xs / 2) $spacing-xs;
+    background-color: rgba($verde-claro, 0.1);
+    color: $verde-oscuro;
+    font-size: $font-size-xs;
+    border-radius: $border-radius-sm;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-sm;
+    color: $verde-oscuro;
+    @include line-clamp(2);
+  }
+  
+  &__excerpt {
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    margin-bottom: $spacing-md;
+    flex-grow: 1;
+    @include line-clamp(3);
+  }
+  
+  &__link {
+    margin-top: auto;
+    color: $naranja-oscuro;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: $font-size-sm;
+    transition: color $transition-fast;
+    align-self: flex-start;
+    
+    &:hover {
+      color: $verde-claro;
+    }
+  }
+}
+
+// Sección de Eventos
+.events-section {
+  background-color: $gray-light;
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+  }
+  
+  &__more {
+    text-align: center;
+  }
+}
+
+// Tarjeta de Evento
+.event-card {
+  @include card;
+  display: flex;
+  overflow: hidden;
+  transition: transform $transition-fast;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    background-color: $naranja-claro;
+    color: $white;
+    padding: $spacing-md;
+    
+    @include responsive(md) {
+      min-width: 120px;
+    }
+  }
+  
+  &__day {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  &__month {
+    font-size: $font-size-md;
+    font-weight: 500;
+  }
+  
+  &__content {
+    flex: 1;
+    padding: $spacing-md;
+  }
+  
+  &__title {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-xs;
+    color: $verde-oscuro;
+  }
+  
+  &__desc {
+    margin-bottom: $spacing-md;
+    color: $gray-dark;
+    font-size: $font-size-sm;
+  }
+  
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-sm;
+    color: $gray-dark;
+    
+    i {
+      margin-right: $spacing-xs;
+      color: $naranja-claro;
+    }
+  }
+}
+
+// Sección de Historias de Éxito
+.success-stories {
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__more {
+    text-align: center;
+  }
+}
+
+// Tarjeta de Historia de Éxito
+.success-story {
+  @include card;
+  overflow: hidden;
+  transition: transform $transition-normal;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+  
+  &__image {
+    height: 250px;
+    overflow: hidden;
+    
+    img {
+      @include responsive-image;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__content {
+    padding: $spacing-md $spacing-lg;
+  }
+  
+  &__title {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+    color: $verde-oscuro;
+  }
+  
+  &__excerpt {
+    margin-bottom: $spacing-md;
+    color: $gray-dark;
+    font-size: $font-size-sm;
+  }
+  
+  &__link {
+    color: $naranja-oscuro;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $verde-claro;
+    }
+  }
+}
+
+// Sección de Boletín
+.newsletter {
+  background: linear-gradient(to right, $verde-oscuro, $verde-claro);
+  color: $white;
+  padding: $spacing-xl 0;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    @include responsive(md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  &__content {
+    margin-bottom: $spacing-lg;
+    
+    @include responsive(md) {
+      flex: 1;
+      margin-bottom: 0;
+      margin-right: $spacing-xl;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__text {
+    font-size: $font-size-md;
+    opacity: 0.9;
+  }
+  
+  &__form {
+    width: 100%;
+    
+    @include responsive(md) {
+      flex: 1;
+    }
+  }
+  
+  &__input-group {
+    display: flex;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__input {
+    flex: 1;
+    padding: $spacing-sm $spacing-md;
+    border: none;
+    border-radius: $border-radius-md 0 0 $border-radius-md;
+    font-size: $font-size-sm;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &__button {
+    background-color: $naranja-oscuro;
+    color: $white;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    font-weight: 500;
+    border-radius: 0 $border-radius-md $border-radius-md 0;
+    cursor: pointer;
+    transition: background-color $transition-fast;
+    
+    &:hover {
+      background-color: color.adjust($naranja-oscuro, $lightness: -10%);
+    }
+  }
+  
+  &__privacy {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-xs;
+    color: rgba($white, 0.9);
+    
+    input {
+      margin-right: $spacing-xs;
+    }
+  }
+}
