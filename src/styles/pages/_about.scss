@@ -49,6 +49,11 @@
       margin-bottom: 0;
     }
   }
+
+  .history__image {
+    display: flex;
+    margin: 5px;
+  }
   
   &__text {
     margin-bottom: $spacing-md;
@@ -69,6 +74,15 @@
   }
 }
 
+.section__title {
+  font-size: 200%;
+  margin: 10px;
+}
+
+.history__text{
+  font-size: 125%;
+  margin: 15px;
+}
 // Sección Misión y Visión
 .mission-vision {
   background-color: $gray-light;
@@ -157,6 +171,14 @@
     @include responsive(lg) {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+
+  .values__title {
+    margin: 5px
+  }
+
+  .values__text {
+    margin: 5px
   }
   
   &__item {

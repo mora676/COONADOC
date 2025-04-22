@@ -30,8 +30,8 @@ const AboutUs = () => {
                 Hoy, COONADOC cuenta con más de 10,000 afiliados en todo el país, y seguimos creciendo gracias a la confianza que los docentes han depositado en nuestra gestión y en nuestros servicios.
               </p>
             </div>
-            <div className="history__image">
-              <img src="/images/history.jpg" alt="Historia de COONADOC" />
+            <div className="history__image responsive-image">
+              <img src="/images/Historia.jpg" alt="Historia de COONADOC" />
             </div>
           </div>
         </div>
