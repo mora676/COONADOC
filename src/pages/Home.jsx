@@ -176,7 +176,7 @@ const Home = () => {
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8583894101084!2d-74.0720987!3d4.6193412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98ec812d32f5%3A0xc08cb826ece75740!2sCoonadoc!5e0!3m2!1ses-419!2sco!4v1745267867085!5m2!1ses-419!2sco" 
                 width="100%" 
-                height="650" 
+                height="350" 
                 style={{ border: 0 }} 
                 allowFullScreen="" 
                 loading="lazy"

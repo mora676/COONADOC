@@ -88,8 +88,8 @@ const Contact = () => {
                   <div className="contact-info__content">
                     <h3 className="contact-info__title">Dirección</h3>
                     <p className="contact-info__details">
-                      Calle Principal #123<br />
-                      Bogotá, Colombia
+                      Cra, 16 # 30 - 63<br />
+                      Teusaquillo, Bogotá, Cundinamarca
                     </p>
                   </div>
                 </div>
@@ -101,8 +101,8 @@ const Contact = () => {
                   <div className="contact-info__content">
                     <h3 className="contact-info__title">Teléfonos</h3>
                     <p className="contact-info__details">
-                      <a href="tel:+5712345678">(+57) 1 234 5678</a><br />
-                      <a href="tel:+573001234567">Celular: (+57) 300 123 4567</a>
+                      Atencion al cliente: 311 501 9158<br />
+                      Linea fija: 601 7523313
                     </p>
                   </div>
                 </div>
@@ -114,8 +114,7 @@ const Contact = () => {
                   <div className="contact-info__content">
                     <h3 className="contact-info__title">Email</h3>
                     <p className="contact-info__details">
-                      <a href="mailto:info@coonadoc.co">info@coonadoc.co</a><br />
-                      <a href="mailto:servicioalcliente@coonadoc.co">servicioalcliente@coonadoc.co</a>
+                      <a href="mailto:servicioalclientecoonadoc@gmail.com">servicioalclientecoonadoc@gmail.com</a>
                     </p>
                   </div>
                 </div>
@@ -128,7 +127,8 @@ const Contact = () => {
                     <h3 className="contact-info__title">Horario de Atención</h3>
                     <p className="contact-info__details">
                       Lunes a Viernes: 8:00 AM - 5:00 PM<br />
-                      Sábados: 9:00 AM - 12:00 PM
+                      Sábados: 8:00 AM - 12:00 PM<br />
+                      Primer Sabado De Mes.
                     </p>
                   </div>
                 </div>
@@ -137,17 +137,17 @@ const Contact = () => {
               <div className="contact-info__social">
                 <h3 className="contact-info__social-title">Síguenos en Redes Sociales</h3>
                 <div className="contact-info__social-links">
-                  <a href="https://facebook.com/coonadoc" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
+                  <a href="https://www.facebook.com/COONADOC/" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="https://twitter.com/coonadoc" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
+                  <a href="https://x.com/Coonadoc" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="https://instagram.com/coonadoc" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
+                  <a href="https://www.instagram.com/coopcoonadoc/" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="https://linkedin.com/company/coonadoc" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
-                    <i className="fab fa-linkedin-in"></i>
+                  <a href="https://api.whatsapp.com/send?phone=573115019158" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">
+                    <i className="fab fa-whatsapp"></i>
                   </a>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
             
             <div className="contact-info__map">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4537406493864!2d-74.06026492428036!3d4.673056042279079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a2e545a44b1%3A0x4b93c74777cef66!2sUniversidad%20Nacional%20de%20Colombia!5e0!3m2!1ses!2sco!4v1650567215693!5m2!1ses!2sco" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8583894101084!2d-74.0720987!3d4.6193412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98ec812d32f5%3A0xc08cb826ece75740!2sCoonadoc!5e0!3m2!1ses-419!2sco!4v1745267867085!5m2!1ses-419!2sco" 
                 width="100%" 
                 height="450" 
                 style={{ border: 0 }} 
@@ -297,7 +297,7 @@ const Contact = () => {
                 <p className="contact-form-section__text">
                   Para una atención más inmediata, puedes comunicarte con nosotros a través de WhatsApp:
                 </p>
-                <a href="https://wa.me/573001234567" className="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=573115019158" className="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-whatsapp"></i> Chatear por WhatsApp
                 </a>
               </div>
@@ -307,8 +307,8 @@ const Contact = () => {
                 <p className="contact-form-section__text">
                   También puedes enviarnos un correo electrónico directamente a:
                 </p>
-                <a href="mailto:info@coonadoc.co" className="contact-form-section__mail-link">
-                  <i className="fas fa-envelope"></i> info@coonadoc.co
+                <a href="mailto:servicioalclientecoonadoc@gmail.com" className="contact-form-section__mail-link">
+                  <i className="fas fa-envelope"></i> servicioalclientecoonadoc@gmail.com
                 </a>
               </div>
             </div>
@@ -403,43 +403,7 @@ const Contact = () => {
                 </p>
               </div>
               <div className="office-card__image">
-                <img src="/images/office-1.jpg" alt="Sede Principal" />
-              </div>
-            </div>
-            
-            <div className="office-card">
-              <div className="office-card__content">
-                <h3 className="office-card__title">Sede Norte</h3>
-                <p className="office-card__address">
-                  <i className="fas fa-map-marker-alt"></i> Av. Norte #456, Bogotá
-                </p>
-                <p className="office-card__phone">
-                  <i className="fas fa-phone"></i> (+57) 1 987 6543
-                </p>
-                <p className="office-card__hours">
-                  <i className="fas fa-clock"></i> Lun-Vie: 9AM-6PM / Sáb: 10AM-1PM
-                </p>
-              </div>
-              <div className="office-card__image">
-                <img src="/images/office-2.jpg" alt="Sede Norte" />
-              </div>
-            </div>
-            
-            <div className="office-card">
-              <div className="office-card__content">
-                <h3 className="office-card__title">Sede Sur</h3>
-                <p className="office-card__address">
-                  <i className="fas fa-map-marker-alt"></i> Calle Sur #789, Bogotá
-                </p>
-                <p className="office-card__phone">
-                  <i className="fas fa-phone"></i> (+57) 1 567 8901
-                </p>
-                <p className="office-card__hours">
-                  <i className="fas fa-clock"></i> Lun-Vie: 8:30AM-5:30PM / Sáb: 9AM-12PM
-                </p>
-              </div>
-              <div className="office-card__image">
-                <img src="/images/office-3.jpg" alt="Sede Sur" />
+                <img src="/images/SedePrincipal.jpg" alt="Sede Principal" />
               </div>
             </div>
           </div>
