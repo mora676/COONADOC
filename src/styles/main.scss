@@ -125,8 +125,9 @@ img {
   }
   
   &__container {
-    @include responsive-container;
+    // Solución: Colocar max-width primero
     max-width: 1000px;
+    @include responsive-container;
   }
   
   &__title {

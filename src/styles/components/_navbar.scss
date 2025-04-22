@@ -6,18 +6,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; // Asegurar que ocupe todo el ancho
+  width: 100vw;
   background-color: $white;
   box-shadow: $shadow-sm;
   z-index: 1000;
   
   &__container {
+    // Aplicando el mixin con el nuevo enfoque
     @include responsive-container;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: $spacing-sm;
-    padding-bottom: $spacing-sm;
+    
+    // Agregar estilos adicionales
+    & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $spacing-sm;
+      padding-bottom: $spacing-sm;
+    }
   }
   
   &__logo {

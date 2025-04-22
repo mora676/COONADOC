@@ -2,7 +2,7 @@
 @use 'sass:math';
 @use 'variables' as *;
 
-// Mixins para media queries
+// Mixins para media queries - manteniendo simple
 @mixin responsive($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: $breakpoint-sm) {
@@ -23,7 +23,7 @@
   }
 }
 
-// Mixin específico para ancho completo (elimina duplicación)
+// Mixin específico para ancho completo
 @mixin full-width {
   width: 100vw;
   position: relative;
@@ -33,13 +33,15 @@
   margin-right: -50vw;
 }
 
-// Mixin para contenedores responsivos
+// Mixin para contenedores responsivos - con declaraciones al inicio
 @mixin responsive-container {
+  // Poniendo todas las declaraciones primero
   width: 100%;
-  max-width: 1400px; // Aumentado para pantallas más grandes
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 $spacing-md;
   
+  // Luego las media queries
   @include responsive(md) {
     padding: 0 $spacing-lg;
   }
