@@ -88,7 +88,7 @@ const Home = () => {
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/images/news-2.jpg" alt="Noticia 2" />
+                <img src="/images/news-2.png" alt="Noticia 2" />
               </div>
               <div className="news__content">
                 <span className="news__date">15 Abril, 2025</span>
@@ -102,7 +102,7 @@ const Home = () => {
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/images/news-3.jpg" alt="Noticia 3" />
+                <img src="/images/news-3.png" alt="Noticia 3" />
               </div>
               <div className="news__content">
                 <span className="news__date">10 Abril, 2025</span>
