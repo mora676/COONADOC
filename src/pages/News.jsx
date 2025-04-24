@@ -46,7 +46,7 @@ const News = () => {
       category: 'servicios',
       date: '10 Abril, 2025',
       author: 'Departamento de Convenios',
-      image: '/images/news-3.jpg',
+      image: '/images/unal.jpg',
       slug: 'convenio-universidad'
     },
     {
@@ -57,7 +57,7 @@ const News = () => {
       category: 'eventos',
       date: '5 Abril, 2025',
       author: 'Consejo de Administración',
-      image: '/images/news-4.jpg',
+      image: '/images/asamblea.avif',
       slug: 'asamblea-general'
     },
     {
@@ -68,7 +68,7 @@ const News = () => {
       category: 'exitos',
       date: '28 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/images/news-5.jpg',
+      image: '/images/maria.jpg',
       slug: 'historia-maria-rodriguez'
     },
     {
