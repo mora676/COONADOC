@@ -347,46 +347,6 @@ const Affiliation = () => {
               <div className="agreements__logo">
                 <img src="/images/aliado-1.jpg" alt="Aliado 1" />
               </div>
-              <h3 className="agreements__name">Universidad Nacional</h3>
-              <p className="agreements__desc">
-                Descuentos del 15% en programas de posgrado y educación continua.
-              </p>
-            </div>
-            
-            <div className="agreements__item">
-              <div className="agreements__logo">
-                <img src="/images/aliado-2.jpg" alt="Aliado 2" />
-              </div>
-              <h3 className="agreements__name">Clínica del Country</h3>
-              <p className="agreements__desc">
-                Tarifas preferenciales en consultas médicas especializadas y exámenes diagnósticos.
-              </p>
-            </div>
-            
-            <div className="agreements__item">
-              <div className="agreements__logo">
-                <img src="/images/aliado-3.jpg" alt="Aliado 3" />
-              </div>
-              <h3 className="agreements__name">Librería Nacional</h3>
-              <p className="agreements__desc">
-                Descuento del 10% en todas las compras y 15% en material educativo.
-              </p>
-            </div>
-            
-            <div className="agreements__item">
-              <div className="agreements__logo">
-                <img src="/images/aliado-4.jpg" alt="Aliado 4" />
-              </div>
-              <h3 className="agreements__name">Decameron Hoteles</h3>
-              <p className="agreements__desc">
-                Descuentos del 20% en temporada baja y 10% en temporada alta.
-              </p>
-            </div>
-            
-            <div className="agreements__item">
-              <div className="agreements__logo">
-                <img src="/images/aliado-5.jpg" alt="Aliado 5" />
-              </div>
               <h3 className="agreements__name">Gimnasio Bodytech</h3>
               <p className="agreements__desc">
                 Tarifas corporativas con hasta 30% de descuento en planes anuales.
@@ -395,11 +355,51 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
+                <img src="/images/aliado-2.jpg" alt="Aliado 2" />
+              </div>
+              <h3 className="agreements__name">Cine Colombia</h3>
+              <p className="agreements__desc">
+                Vive días de pelicula con nuestras tarifas exclusivas.
+              </p>
+            </div>
+            
+            <div className="agreements__item">
+              <div className="agreements__logo">
+                <img src="/images/aliado-3.jpg" alt="Aliado 3" />
+              </div>
+              <h3 className="agreements__name">Colmedica</h3>
+              <p className="agreements__desc">
+                Orientación médica ilimitada por llamada o video llamada 24/7.
+              </p>
+            </div>
+            
+            <div className="agreements__item">
+              <div className="agreements__logo">
+                <img src="/images/aliado-4.jpg" alt="Aliado 4" />
+              </div>
+              <h3 className="agreements__name">Parque Tematico Hacienda Napoles</h3>
+              <p className="agreements__desc">
+                Vive experiencias inolvidables con nuestras nuevas tarifas exclusivas.
+              </p>
+            </div>
+            
+            <div className="agreements__item">
+              <div className="agreements__logo">
+                <img src="/images/aliado-5.jpg" alt="Aliado 5" />
+              </div>
+              <h3 className="agreements__name">Mundo Aventura</h3>
+              <p className="agreements__desc">
+                Vive días de aventuray diversión con nuestras nuevas tarifas.
+              </p>
+            </div>
+            
+            <div className="agreements__item">
+              <div className="agreements__logo">
                 <img src="/images/aliado-6.jpg" alt="Aliado 6" />
               </div>
-              <h3 className="agreements__name">Óptica Lafam</h3>
+              <h3 className="agreements__name">Teatro Nacional</h3>
               <p className="agreements__desc">
-                25% de descuento en monturas y lentes oftálmicos.
+                Pregunta por nuestras tarifas exclusivas y disfruta del mejor teatro.
               </p>
             </div>
           </div>
