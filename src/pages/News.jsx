@@ -35,7 +35,7 @@ const News = () => {
       category: 'educacion',
       date: '15 Abril, 2025',
       author: 'Departamento de Educación',
-      image: '/images/news-2.jpg',
+      image: '/images/Capacitaciones.avif',
       slug: 'calendario-capacitaciones'
     },
     {
