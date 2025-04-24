@@ -216,7 +216,7 @@ const AboutUs = () => {
           <div className="team__grid">
             <div className="team__member">
               <div className="team__photo">
-                <img src="/images/director-1.jpg" alt="Director 1" />
+                <img src="/images/silueta-hombre.png" alt="Director 1" />
               </div>
               <h3 className="team__name">Carlos Rodríguez</h3>
               <p className="team__position">Presidente</p>
@@ -227,7 +227,7 @@ const AboutUs = () => {
             
             <div className="team__member">
               <div className="team__photo">
-                <img src="/images/director-2.jpg" alt="Director 2" />
+                <img src="/images/silueta-mujer.png" alt="Director 2" />
               </div>
               <h3 className="team__name">Martha Sánchez</h3>
               <p className="team__position">Gerente General</p>
@@ -238,7 +238,7 @@ const AboutUs = () => {
             
             <div className="team__member">
               <div className="team__photo">
-                <img src="/images/director-3.jpg" alt="Director 3" />
+                <img src="/images/silueta-hombre.png" alt="Director 3" />
               </div>
               <h3 className="team__name">Juan Gómez</h3>
               <p className="team__position">Director Financiero</p>
@@ -249,7 +249,7 @@ const AboutUs = () => {
             
             <div className="team__member">
               <div className="team__photo">
-                <img src="/images/director-4.jpg" alt="Director 4" />
+                <img src="/images/silueta-mujer.png" alt="Director 4" />
               </div>
               <h3 className="team__name">Laura Mendoza</h3>
               <p className="team__position">Directora de Servicios</p>
