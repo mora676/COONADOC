@@ -11,7 +11,7 @@ const Home = () => {
           <p className="banner__text">
             Cooperativa Nacional de Docentes - Comprometidos con el bienestar y progreso de nuestros afiliados.
           </p>
-          <Link to="/afiliacion-servicios" className="btn btn--primary">
+          <Link to="/COONADOC/afiliacion-servicios" className="btn btn--primary">
             Conoce nuestros servicios
           </Link>
         </div>
@@ -74,7 +74,7 @@ const Home = () => {
           <div className="news__grid">
             <div className="news__card">
               <div className="news__image">
-                <img src="/images/news-1.jpg" alt="Noticia 1" />
+                <img src="/COONADOC/public/images/news-1.jpg" alt="Noticia 1" />
               </div>
               <div className="news__content">
                 <span className="news__date">21 Abril, 2025</span>
@@ -82,13 +82,13 @@ const Home = () => {
                 <p className="news__excerpt">
                   Lanzamos una nueva línea de crédito para apoyar la educación superior de los hijos de nuestros afiliados.
                 </p>
-                <Link to="/noticias/nueva-linea-credito" className="news__link">Leer más</Link>
+                <Link to="/COONADOC/noticias/nueva-linea-credito" className="news__link">Leer más</Link>
               </div>
             </div>
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/images/news-2.png" alt="Noticia 2" />
+                <img src="/COONADOC/public/images/news-2.png" alt="Noticia 2" />
               </div>
               <div className="news__content">
                 <span className="news__date">15 Abril, 2025</span>
@@ -96,13 +96,13 @@ const Home = () => {
                 <p className="news__excerpt">
                   Conoce nuestro calendario de capacitaciones gratuitas para el segundo trimestre del año.
                 </p>
-                <Link to="/noticias/calendario-capacitaciones" className="news__link">Leer más</Link>
+                <Link to="/COONADOC/noticias/calendario-capacitaciones" className="news__link">Leer más</Link>
               </div>
             </div>
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/images/news-3.png" alt="Noticia 3" />
+                <img src="/COONADOC/public/images/news-3.png" alt="Noticia 3" />
               </div>
               <div className="news__content">
                 <span className="news__date">10 Abril, 2025</span>
@@ -110,13 +110,13 @@ const Home = () => {
                 <p className="news__excerpt">
                   Firmamos un convenio con la Universidad Nacional para beneficios en programas de posgrado.
                 </p>
-                <Link to="/noticias/convenio-universidad" className="news__link">Leer más</Link>
+                <Link to="/COONADOC/noticias/convenio-universidad" className="news__link">Leer más</Link>
               </div>
             </div>
           </div>
           
           <div className="news__more">
-            <Link to="/noticias" className="btn btn--secondary">Ver todas las noticias</Link>
+            <Link to="/COONADOC/noticias" className="btn btn--secondary">Ver todas las noticias</Link>
           </div>
         </div>
       </section>
@@ -128,7 +128,7 @@ const Home = () => {
           <p className="cta__text">
             Únete a nuestra cooperativa y disfruta de todos los beneficios que tenemos para ti y tu familia.
           </p>
-          <Link to="/afiliacion-servicios" className="btn btn--light">Afiliate ahora</Link>
+          <Link to="/COONADOC/afiliacion-servicios" className="btn btn--light">Afiliate ahora</Link>
         </div>
       </section>
       
@@ -169,7 +169,7 @@ const Home = () => {
                 </div>
               </div>
               
-              <Link to="/contacto" className="btn btn--outline">Más información de contacto</Link>
+              <Link to="/COONADOC/contacto" className="btn btn--outline">Más información de contacto</Link>
             </div>
             
             <div className="contact-quick__map">

@@ -31,7 +31,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="history__image responsive-image">
-              <img src="/images/Historia.jpg" alt="Historia de COONADOC" />
+              <img src="/COONADOC/public/images/Historia.jpg" alt="Historia de COONADOC" />
             </div>
           </div>
         </div>

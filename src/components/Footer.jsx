@@ -16,16 +16,16 @@ const Footer = () => {
           <h3 className="footer__title">Enlaces Rápidos</h3>
           <ul className="footer__list">
             <li className="footer__item">
-              <Link to="/" className="footer__link">Inicio</Link>
+              <Link to="/COONADOC/" className="footer__link">Inicio</Link>
             </li>
             <li className="footer__item">
-              <Link to="/quienes-somos" className="footer__link">Quiénes Somos</Link>
+              <Link to="/COONADOC/quienes-somos" className="footer__link">Quiénes Somos</Link>
             </li>
             <li className="footer__item">
-              <Link to="/afiliacion-servicios" className="footer__link">Afiliación y Servicios</Link>
+              <Link to="/COONADOC/afiliacion-servicios" className="footer__link">Afiliación y Servicios</Link>
             </li>
             <li className="footer__item">
-              <Link to="/documentacion" className="footer__link">Documentación</Link>
+              <Link to="/COONADOC/documentacion" className="footer__link">Documentación</Link>
             </li>
           </ul>
         </div>

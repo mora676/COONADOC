@@ -403,7 +403,7 @@ const Contact = () => {
                 </p>
               </div>
               <div className="office-card__image">
-                <img src="/images/SedePrincipal.jpg" alt="Sede Principal" />
+                <img src="/COONADOC/public/images/SedePrincipal.jpg" alt="Sede Principal" />
               </div>
             </div>
           </div>

@@ -21,12 +21,12 @@ function App() {
         <Navbar />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/quienes-somos" element={<AboutUs />} />
-            <Route path="/afiliacion-servicios" element={<Affiliation />} />
-            <Route path="/documentacion" element={<Documents />} />
-            <Route path="/noticias" element={<News />} />
-            <Route path="/contacto" element={<Contact />} />
+            <Route path="/COONADOC" element={<Home />} />
+            <Route path="/COONADOC/quienes-somos" element={<AboutUs />} />
+            <Route path="/COONADOC/afiliacion-servicios" element={<Affiliation />} />
+            <Route path="/COONADOC/documentacion" element={<Documents />} />
+            <Route path="/COONADOC/noticias" element={<News />} />
+            <Route path="/COONADOC/contacto" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

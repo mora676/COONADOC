@@ -345,7 +345,7 @@ const Affiliation = () => {
           <div className="agreements__grid">
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-1.jpg" alt="Aliado 1" />
+                <img src="/COONADOC/public/images/aliado-1.jpg" alt="Aliado 1" />
               </div>
               <h3 className="agreements__name">Gimnasio Bodytech</h3>
               <p className="agreements__desc">
@@ -355,7 +355,7 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-2.jpg" alt="Aliado 2" />
+                <img src="/COONADOC/public/images/aliado-2.jpg" alt="Aliado 2" />
               </div>
               <h3 className="agreements__name">Cine Colombia</h3>
               <p className="agreements__desc">
@@ -365,7 +365,7 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-3.jpg" alt="Aliado 3" />
+                <img src="/COONADOC/public/images/aliado-3.jpg" alt="Aliado 3" />
               </div>
               <h3 className="agreements__name">Colmedica</h3>
               <p className="agreements__desc">
@@ -375,7 +375,7 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-4.jpg" alt="Aliado 4" />
+                <img src="/COONADOC/public/images/aliado-4.jpg" alt="Aliado 4" />
               </div>
               <h3 className="agreements__name">Parque Tematico Hacienda Napoles</h3>
               <p className="agreements__desc">
@@ -385,7 +385,7 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-5.jpg" alt="Aliado 5" />
+                <img src="/COONADOC/public/images/aliado-5.jpg" alt="Aliado 5" />
               </div>
               <h3 className="agreements__name">Mundo Aventura</h3>
               <p className="agreements__desc">
@@ -395,7 +395,7 @@ const Affiliation = () => {
             
             <div className="agreements__item">
               <div className="agreements__logo">
-                <img src="/images/aliado-6.jpg" alt="Aliado 6" />
+                <img src="/COONADOC/public/images/aliado-6.jpg" alt="Aliado 6" />
               </div>
               <h3 className="agreements__name">Teatro Nacional</h3>
               <p className="agreements__desc">

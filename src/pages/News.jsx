@@ -24,7 +24,7 @@ const News = () => {
       category: 'servicios',
       date: '21 Abril, 2025',
       author: 'Departamento de Servicios',
-      image: '/images/news-1.jpg',
+      image: '/COONADOC/public/images/news-1.jpg',
       slug: 'nueva-linea-credito'
     },
     {
@@ -35,7 +35,7 @@ const News = () => {
       category: 'educacion',
       date: '15 Abril, 2025',
       author: 'Departamento de Educación',
-      image: '/images/Capacitaciones.avif',
+      image: '/COONADOC/public/images/Capacitaciones.avif',
       slug: 'calendario-capacitaciones'
     },
     {
@@ -46,7 +46,7 @@ const News = () => {
       category: 'servicios',
       date: '10 Abril, 2025',
       author: 'Departamento de Convenios',
-      image: '/images/unal.jpg',
+      image: '/COONADOC/public/images/unal.jpg',
       slug: 'convenio-universidad'
     },
     {
@@ -57,7 +57,7 @@ const News = () => {
       category: 'eventos',
       date: '5 Abril, 2025',
       author: 'Consejo de Administración',
-      image: '/images/asamblea.avif',
+      image: '/COONADOC/public/images/asamblea.avif',
       slug: 'asamblea-general'
     },
     {
@@ -68,7 +68,7 @@ const News = () => {
       category: 'exitos',
       date: '28 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/images/maria.jpg',
+      image: '/COONADOC/public/images/maria.jpg',
       slug: 'historia-maria-rodriguez'
     },
     {
@@ -79,7 +79,7 @@ const News = () => {
       category: 'servicios',
       date: '22 Marzo, 2025',
       author: 'Departamento Financiero',
-      image: '/images/news-6.jpg',
+      image: '/COONADOC/public/images/news-6.png',
       slug: 'resultados-primer-trimestre'
     },
     {
@@ -90,7 +90,7 @@ const News = () => {
       category: 'eventos',
       date: '15 Marzo, 2025',
       author: 'Departamento de Bienestar',
-      image: '/images/news-7.jpg',
+      image: '/COONADOC/public/images/news-7.png',
       slug: 'jornada-salud'
     },
     {
@@ -101,8 +101,19 @@ const News = () => {
       category: 'exitos',
       date: '10 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/images/news-8.jpg',
+      image: '/COONADOC/public/images/news-8.png',
       slug: 'historia-carlos-gomez'
+    },
+    {
+      id: 9,
+      title: 'Bienestar Coonadoc',
+      excerpt: 'Créditos para viajes nacionales e internacionales promovidos por COONADOC de forma directa o través de sus convenios.',
+      content: 'OONADOC, busca el mejoramiento de la calidad de vida del asociado, sus familias y personal administrativo, a través de las relaciones con consigo mismo, con el otro y el medio ambiente ,logrando la construcción de un buen vivir con relaciones equitativas y solidarias.',
+      category: 'educacion',
+      date: '1 Marzo, 2025',
+      author: 'Departamento de Comunicaciones',
+      image: '/COONADOC/public/images/news-9.jpg',
+      slug: 'bienestar-coonadoc'
     }
   ];
   
@@ -153,7 +164,7 @@ const News = () => {
                     <span className="news-card__category">{categories.find(cat => cat.id === item.category)?.name}</span>
                     <h3 className="news-card__title">{item.title}</h3>
                     <p className="news-card__excerpt">{item.excerpt}</p>
-                    <Link to={`/noticias/${item.slug}`} className="news-card__link">Leer más</Link>
+                    <Link to={`/COONADOC/noticias/${item.slug}`} className="news-card__link">Leer más</Link>
                   </div>
                 </div>
               ))
@@ -241,7 +252,7 @@ const News = () => {
           </div>
           
           <div className="events-section__more">
-            <Link to="/eventos" className="btn btn--primary">Ver todos los eventos</Link>
+            <Link to="/COONADOC/eventos" className="btn btn--primary">Ver todos los eventos</Link>
           </div>
         </div>
       </section>
@@ -257,33 +268,33 @@ const News = () => {
           <div className="success-stories__grid">
             <div className="success-story">
               <div className="success-story__image">
-                <img src="/images/news-5.jpg" alt="María Rodríguez" />
+                <img src="/COONADOC/public/images/maria.jpg" alt="María Rodríguez" />
               </div>
               <div className="success-story__content">
                 <h3 className="success-story__title">María Rodríguez: De profesora a empresaria exitosa</h3>
                 <p className="success-story__excerpt">
                   María, quien trabajaba como profesora de primaria, identificó la necesidad de materiales didácticos innovadores para la enseñanza de matemáticas.
                 </p>
-                <Link to="/noticias/historia-maria-rodriguez" className="success-story__link">Leer su historia</Link>
+                <Link to="/COONADOC/noticias/historia-maria-rodriguez" className="success-story__link">Leer su historia</Link>
               </div>
             </div>
             
             <div className="success-story">
               <div className="success-story__image">
-                <img src="/images/news-8.jpg" alt="Carlos Gómez" />
+                <img src="/COONADOC/public/images/news-8.png" alt="Carlos Gómez" />
               </div>
               <div className="success-story__content">
                 <h3 className="success-story__title">Carlos Gómez: Del aula de clases a la vivienda propia</h3>
                 <p className="success-story__excerpt">
                   Después de 15 años como docente, Carlos había perdido la esperanza de tener casa propia debido a los altos costos y dificultades para acceder a créditos bancarios.
                 </p>
-                <Link to="/noticias/historia-carlos-gomez" className="success-story__link">Leer su historia</Link>
+                <Link to="/COONADOC/noticias/historia-carlos-gomez" className="success-story__link">Leer su historia</Link>
               </div>
             </div>
           </div>
           
           <div className="success-stories__more">
-            <Link to="/noticias/historias-exito" className="btn btn--secondary">Ver más historias</Link>
+            <Link to="/COONADOC/noticias/historias-exito" className="btn btn--secondary">Ver más historias</Link>
           </div>
         </div>
       </section>
