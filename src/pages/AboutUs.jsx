@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const AboutUs = () => {
   return (
@@ -278,6 +279,7 @@ const AboutUs = () => {
           <Link to="/COONADOC/contacto" className="btn btn--light">Contactar ahora</Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

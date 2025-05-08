@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Footer from '../components/Footer';
 const Documents = () => {
   // Estado para filtrar documentos por categoría
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -23,7 +23,7 @@ const Documents = () => {
       format: 'PDF',
       size: '120 KB',
       updatedAt: '15/04/2025',
-      downloadUrl: '/documents/formulario-afiliacion.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const Documents = () => {
       format: 'PDF',
       size: '150 KB',
       updatedAt: '10/04/2025',
-      downloadUrl: '/documents/solicitud-credito.pdf'
+      downloadUrl: '/documents/Formato SOLICITUD DE CREDITO.pdf'
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const Documents = () => {
       format: 'PDF',
       size: '85 KB',
       updatedAt: '20/03/2025',
-      downloadUrl: '/documents/autorizacion-descuento.pdf'
+      downloadUrl: '/documents/SED APORTES.pdf'
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const Documents = () => {
       format: 'PDF',
       size: '320 KB',
       updatedAt: '05/03/2025',
-      downloadUrl: '/documents/reglamento-credito.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 5,
@@ -63,7 +63,7 @@ const Documents = () => {
       format: 'PDF',
       size: '95 KB',
       updatedAt: '18/04/2025',
-      downloadUrl: '/documents/actualizacion-datos.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 6,
@@ -73,7 +73,7 @@ const Documents = () => {
       format: 'PDF',
       size: '110 KB',
       updatedAt: '12/02/2025',
-      downloadUrl: '/documents/solicitud-retiro.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 7,
@@ -83,7 +83,7 @@ const Documents = () => {
       format: 'PDF',
       size: '105 KB',
       updatedAt: '25/03/2025',
-      downloadUrl: '/documents/formulario-beneficiarios.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 8,
@@ -93,7 +93,7 @@ const Documents = () => {
       format: 'PDF',
       size: '130 KB',
       updatedAt: '08/04/2025',
-      downloadUrl: '/documents/solicitud-auxilios.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 9,
@@ -103,7 +103,7 @@ const Documents = () => {
       format: 'PDF',
       size: '145 KB',
       updatedAt: '30/03/2025',
-      downloadUrl: '/documents/solicitud-credito-educativo.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 10,
@@ -113,7 +113,7 @@ const Documents = () => {
       format: 'PDF',
       size: '450 KB',
       updatedAt: '15/01/2025',
-      downloadUrl: '/documents/estatutos-coonadoc.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 11,
@@ -123,7 +123,7 @@ const Documents = () => {
       format: 'PDF',
       size: '380 KB',
       updatedAt: '20/01/2025',
-      downloadUrl: '/documents/reglamento-interno.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     },
     {
       id: 12,
@@ -133,7 +133,7 @@ const Documents = () => {
       format: 'PDF',
       size: '155 KB',
       updatedAt: '05/04/2025',
-      downloadUrl: '/documents/solicitud-credito-vivienda.pdf'
+      downloadUrl: '/documents/Formato solicitud de asociación.pdf'
     }
   ];
   
@@ -352,6 +352,7 @@ const Documents = () => {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
