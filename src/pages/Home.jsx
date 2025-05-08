@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import Footer from '../components/Footer';
+
 
 const Home = () => {
   return (
@@ -11,7 +13,7 @@ const Home = () => {
           <p className="banner__text">
             Cooperativa Nacional de Docentes - Comprometidos con el bienestar y progreso de nuestros afiliados.
           </p>
-          <Link to="/COONADOC/afiliacion-servicios" className="btn btn--primary">
+          <Link to="/Home/afiliacion-servicios" className="btn btn--primary">
             Conoce nuestros servicios
           </Link>
         </div>
@@ -74,7 +76,7 @@ const Home = () => {
           <div className="news__grid">
             <div className="news__card">
               <div className="news__image">
-                <img src="/COONADOC/public/images/news-1.jpg" alt="Noticia 1" />
+                <img src="/images/news-1.jpg" alt="Noticia 1" />
               </div>
               <div className="news__content">
                 <span className="news__date">21 Abril, 2025</span>
@@ -88,7 +90,7 @@ const Home = () => {
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/COONADOC/public/images/news-2.png" alt="Noticia 2" />
+                <img src="/images/news-2.png" alt="Noticia 2" />
               </div>
               <div className="news__content">
                 <span className="news__date">15 Abril, 2025</span>
@@ -102,7 +104,7 @@ const Home = () => {
             
             <div className="news__card">
               <div className="news__image">
-                <img src="/COONADOC/public/images/news-3.png" alt="Noticia 3" />
+                <img src="/images/news-3.png" alt="Noticia 3" />
               </div>
               <div className="news__content">
                 <span className="news__date">10 Abril, 2025</span>
@@ -169,7 +171,7 @@ const Home = () => {
                 </div>
               </div>
               
-              <Link to="/COONADOC/contacto" className="btn btn--outline">Más información de contacto</Link>
+              <Link to="/contacto" className="btn btn--outline">Más información de contacto</Link>
             </div>
             
             <div className="contact-quick__map">
@@ -186,6 +188,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

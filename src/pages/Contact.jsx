@@ -114,7 +114,7 @@ const Contact = () => {
                   <div className="contact-info__content">
                     <h3 className="contact-info__title">Email</h3>
                     <p className="contact-info__details">
-                      <a href="mailto:servicioalclientecoonadoc@gmail.com">servicioalclientecoonadoc@gmail.com</a>
+                      <a className='email-cont' href="mailto:servicioalclientecoonadoc@gmail.com">servicioalclientecoonadoc@gmail.com</a>
                     </p>
                   </div>
                 </div>
@@ -403,7 +403,7 @@ const Contact = () => {
                 </p>
               </div>
               <div className="office-card__image">
-                <img src="/COONADOC/public/images/SedePrincipal.jpg" alt="Sede Principal" />
+                <img src="/images/SedePrincipal.jpg" alt="Sede Principal" />
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ const News = () => {
       category: 'servicios',
       date: '21 Abril, 2025',
       author: 'Departamento de Servicios',
-      image: '/COONADOC/public/images/news-1.jpg',
+      image: '/images/news-1.jpg',
       slug: 'nueva-linea-credito'
     },
     {
@@ -35,7 +35,7 @@ const News = () => {
       category: 'educacion',
       date: '15 Abril, 2025',
       author: 'Departamento de Educación',
-      image: '/COONADOC/public/images/Capacitaciones.avif',
+      image: '/images/Capacitaciones.avif',
       slug: 'calendario-capacitaciones'
     },
     {
@@ -46,7 +46,7 @@ const News = () => {
       category: 'servicios',
       date: '10 Abril, 2025',
       author: 'Departamento de Convenios',
-      image: '/COONADOC/public/images/unal.jpg',
+      image: '/images/unal.jpg',
       slug: 'convenio-universidad'
     },
     {
@@ -57,7 +57,7 @@ const News = () => {
       category: 'eventos',
       date: '5 Abril, 2025',
       author: 'Consejo de Administración',
-      image: '/COONADOC/public/images/asamblea.avif',
+      image: '/images/asamblea.avif',
       slug: 'asamblea-general'
     },
     {
@@ -68,7 +68,7 @@ const News = () => {
       category: 'exitos',
       date: '28 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/COONADOC/public/images/maria.jpg',
+      image: '/images/maria.jpg',
       slug: 'historia-maria-rodriguez'
     },
     {
@@ -79,7 +79,7 @@ const News = () => {
       category: 'servicios',
       date: '22 Marzo, 2025',
       author: 'Departamento Financiero',
-      image: '/COONADOC/public/images/news-6.png',
+      image: '/images/news-6.png',
       slug: 'resultados-primer-trimestre'
     },
     {
@@ -90,7 +90,7 @@ const News = () => {
       category: 'eventos',
       date: '15 Marzo, 2025',
       author: 'Departamento de Bienestar',
-      image: '/COONADOC/public/images/news-7.png',
+      image: '/images/news-7.png',
       slug: 'jornada-salud'
     },
     {
@@ -101,7 +101,7 @@ const News = () => {
       category: 'exitos',
       date: '10 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/COONADOC/public/images/news-8.png',
+      image: '/images/news-8.png',
       slug: 'historia-carlos-gomez'
     },
     {
@@ -112,7 +112,7 @@ const News = () => {
       category: 'educacion',
       date: '1 Marzo, 2025',
       author: 'Departamento de Comunicaciones',
-      image: '/COONADOC/public/images/news-9.jpg',
+      image: '/images/news-9.jpg',
       slug: 'bienestar-coonadoc'
     }
   ];
@@ -164,7 +164,7 @@ const News = () => {
                     <span className="news-card__category">{categories.find(cat => cat.id === item.category)?.name}</span>
                     <h3 className="news-card__title">{item.title}</h3>
                     <p className="news-card__excerpt">{item.excerpt}</p>
-                    <Link to={`/COONADOC/noticias/${item.slug}`} className="news-card__link">Leer más</Link>
+                    <Link to={`/Home/noticias/${item.slug}`} className="news-card__link">Leer más</Link>
                   </div>
                 </div>
               ))
@@ -202,7 +202,7 @@ const News = () => {
                     <i className="fas fa-map-marker-alt"></i> Auditorio Principal
                   </span>
                 </div>
-                <Link to="/eventos/asamblea-general" className="btn btn--outline btn--sm">Más información</Link>
+                <div  className="btn btn--outline btn--sm">Más información</div>
               </div>
             </div>
             
@@ -224,7 +224,7 @@ const News = () => {
                     <i className="fas fa-map-marker-alt"></i> Sede Principal
                   </span>
                 </div>
-                <Link to="/eventos/jornada-salud" className="btn btn--outline btn--sm">Más información</Link>
+                <div className="btn btn--outline btn--sm">Más información</div>
               </div>
             </div>
             
@@ -246,13 +246,13 @@ const News = () => {
                     <i className="fas fa-map-marker-alt"></i> Sala de Capacitaciones
                   </span>
                 </div>
-                <Link to="/eventos/taller-finanzas" className="btn btn--outline btn--sm">Más información</Link>
+                <div className="btn btn--outline btn--sm">Más información</div>
               </div>
             </div>
           </div>
           
           <div className="events-section__more">
-            <Link to="/COONADOC/eventos" className="btn btn--primary">Ver todos los eventos</Link>
+            <div  className="btn btn--primary">Ver todos los eventos</div>
           </div>
         </div>
       </section>
@@ -268,33 +268,33 @@ const News = () => {
           <div className="success-stories__grid">
             <div className="success-story">
               <div className="success-story__image">
-                <img src="/COONADOC/public/images/maria.jpg" alt="María Rodríguez" />
+                <img src="/images/maria.jpg" alt="María Rodríguez" />
               </div>
               <div className="success-story__content">
                 <h3 className="success-story__title">María Rodríguez: De profesora a empresaria exitosa</h3>
                 <p className="success-story__excerpt">
                   María, quien trabajaba como profesora de primaria, identificó la necesidad de materiales didácticos innovadores para la enseñanza de matemáticas.
                 </p>
-                <Link to="/COONADOC/noticias/historia-maria-rodriguez" className="success-story__link">Leer su historia</Link>
+                <div className="success-story__link">Leer su historia</div>
               </div>
             </div>
             
             <div className="success-story">
               <div className="success-story__image">
-                <img src="/COONADOC/public/images/news-8.png" alt="Carlos Gómez" />
+                <img src="/images/news-8.png" alt="Carlos Gómez" />
               </div>
               <div className="success-story__content">
                 <h3 className="success-story__title">Carlos Gómez: Del aula de clases a la vivienda propia</h3>
                 <p className="success-story__excerpt">
                   Después de 15 años como docente, Carlos había perdido la esperanza de tener casa propia debido a los altos costos y dificultades para acceder a créditos bancarios.
                 </p>
-                <Link to="/COONADOC/noticias/historia-carlos-gomez" className="success-story__link">Leer su historia</Link>
+                <div className="success-story__link">Leer su historia</div>
               </div>
             </div>
           </div>
           
           <div className="success-stories__more">
-            <Link to="/COONADOC/noticias/historias-exito" className="btn btn--secondary">Ver más historias</Link>
+            <div  className="btn btn--secondary">Ver más historias</div>
           </div>
         </div>
       </section>

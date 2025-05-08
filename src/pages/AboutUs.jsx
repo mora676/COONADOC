@@ -29,9 +29,16 @@ const AboutUs = () => {
               <p className="history__text">
                 Hoy, COONADOC cuenta con más de 10,000 afiliados en todo el país, y seguimos creciendo gracias a la confianza que los docentes han depositado en nuestra gestión y en nuestros servicios.
               </p>
+              <button
+                className="btn btn-ver-video"
+                onClick={() => window.open('https://www.youtube.com/watch?v=gILqRwzFPFs', '_blank')}
+              >
+                Click para ver video de historia completo
+              </button>
+
             </div>
             <div className="history__image responsive-image">
-              <img src="/COONADOC/public/images/Historia.jpg" alt="Historia de COONADOC" />
+              <img src="/images/Historia.jpg" alt="Historia de COONADOC" />
             </div>
           </div>
         </div>
@@ -50,7 +57,7 @@ const AboutUs = () => {
                 Somos una cooperativa comprometida con el bienestar integral y el mejoramiento de la calidad de vida de los docentes y sus familias, ofreciendo servicios financieros y sociales de calidad, con un enfoque en la educación, la solidaridad y el desarrollo sostenible.
               </p>
             </div>
-            
+
             <div className="mission-vision__box vision">
               <div className="mission-vision__icon">
                 <i className="fas fa-eye"></i>
@@ -68,7 +75,7 @@ const AboutUs = () => {
       <section className="section values">
         <div className="section__container">
           <h2 className="section__title">Nuestros Valores</h2>
-          
+
           <div className="values__grid">
             <div className="values__item">
               <div className="values__icon">
@@ -79,7 +86,7 @@ const AboutUs = () => {
                 Trabajamos juntos por el bienestar común, apoyándonos mutuamente para alcanzar nuestras metas.
               </p>
             </div>
-            
+
             <div className="values__item">
               <div className="values__icon">
                 <i className="fas fa-balance-scale"></i>
@@ -89,7 +96,7 @@ const AboutUs = () => {
                 Promovemos un trato justo y equilibrado para todos nuestros afiliados, sin distinciones ni preferencias.
               </p>
             </div>
-            
+
             <div className="values__item">
               <div className="values__icon">
                 <i className="fas fa-handshake"></i>
@@ -99,7 +106,7 @@ const AboutUs = () => {
                 Asumimos nuestros compromisos con seriedad y garantizamos el cumplimiento de nuestras obligaciones.
               </p>
             </div>
-            
+
             <div className="values__item">
               <div className="values__icon">
                 <i className="fas fa-users"></i>
@@ -109,7 +116,7 @@ const AboutUs = () => {
                 Fomentamos la participación activa de todos los afiliados en la toma de decisiones de la cooperativa.
               </p>
             </div>
-            
+
             <div className="values__item">
               <div className="values__icon">
                 <i className="fas fa-lightbulb"></i>
@@ -119,7 +126,7 @@ const AboutUs = () => {
                 Buscamos constantemente nuevas y mejores formas de satisfacer las necesidades de nuestros afiliados.
               </p>
             </div>
-            
+
             <div className="values__item">
               <div className="values__icon">
                 <i className="fas fa-shield-alt"></i>
@@ -140,7 +147,7 @@ const AboutUs = () => {
           <p className="documents__intro">
             Estos documentos establecen las normas, procedimientos y lineamientos que rigen el funcionamiento de nuestra cooperativa.
           </p>
-          
+
           <div className="documents__list">
             <div className="documents__item">
               <div className="documents__icon">
@@ -156,7 +163,7 @@ const AboutUs = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="documents__item">
               <div className="documents__icon">
                 <i className="fas fa-file-pdf"></i>
@@ -171,7 +178,7 @@ const AboutUs = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="documents__item">
               <div className="documents__icon">
                 <i className="fas fa-file-pdf"></i>
@@ -186,7 +193,7 @@ const AboutUs = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="documents__item">
               <div className="documents__icon">
                 <i className="fas fa-file-pdf"></i>
@@ -212,11 +219,11 @@ const AboutUs = () => {
           <p className="team__intro">
             Conoce a las personas que lideran COONADOC, comprometidas con el bienestar de nuestros afiliados y el crecimiento sostenible de la cooperativa.
           </p>
-          
+
           <div className="team__grid">
             <div className="team__member">
               <div className="team__photo">
-                <img src="/COONADOC/public/images/silueta-hombre.png" alt="Director 1" />
+                <img src="/images/silueta-hombre.png" alt="Director 1" />
               </div>
               <h3 className="team__name">Carlos Rodríguez</h3>
               <p className="team__position">Presidente</p>
@@ -224,10 +231,10 @@ const AboutUs = () => {
                 Doctor en Educación con más de 20 años de experiencia en el sector cooperativo.
               </p>
             </div>
-            
+
             <div className="team__member">
               <div className="team__photo">
-                <img src="/COONADOC/public/images/silueta-mujer.png" alt="Director 2" />
+                <img src="/images/silueta-mujer.png" alt="Director 2" />
               </div>
               <h3 className="team__name">Martha Sánchez</h3>
               <p className="team__position">Gerente General</p>
@@ -235,10 +242,10 @@ const AboutUs = () => {
                 Especialista en Economía Solidaria con amplia trayectoria en administración de cooperativas.
               </p>
             </div>
-            
+
             <div className="team__member">
               <div className="team__photo">
-                <img src="/COONADOC/public/images/silueta-hombre.png" alt="Director 3" />
+                <img src="/images/silueta-hombre.png" alt="Director 3" />
               </div>
               <h3 className="team__name">Juan Gómez</h3>
               <p className="team__position">Director Financiero</p>
@@ -246,10 +253,10 @@ const AboutUs = () => {
                 Máster en Finanzas con experiencia en el diseño de productos financieros para el sector solidario.
               </p>
             </div>
-            
+
             <div className="team__member">
               <div className="team__photo">
-                <img src="/COONADOC/public/images/silueta-mujer.png" alt="Director 4" />
+                <img src="/images/silueta-mujer.png" alt="Director 4" />
               </div>
               <h3 className="team__name">Laura Mendoza</h3>
               <p className="team__position">Directora de Servicios</p>

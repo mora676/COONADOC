@@ -11,40 +11,45 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <NavLink to="/COONADOC/" className="navbar__logo">
-          <img src="/COONADOC/public/images/Logo.svg" alt="COONADOC Logo" />
+        <NavLink to="/Home" className="navbar__logo">
+          <img src="/images/Logo.svg" alt="coonadoc-front Logo" />
         </NavLink>
 
         <div className={`navbar__menu ${isMenuOpen ? 'active' : ''}`}>
           <ul className="navbar__list">
             <li className="navbar__item">
-              <NavLink to="/COONADOC/" className="navbar__link">
+              <NavLink to="/Home/" className="navbar__link">
                 Inicio
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to="/COONADOC/quienes-somos" className="navbar__link">
+              <NavLink to="/Home/quienes-somos" className="navbar__link">
                 Quiénes Somos
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to="/COONADOC/afiliacion-servicios" className="navbar__link">
+              <NavLink to="/Home/afiliacion-servicios" className="navbar__link">
                 Afiliación y Servicios
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to="/COONADOC/documentacion" className="navbar__link">
+              <NavLink to="/Home/documentacion" className="navbar__link">
                 Documentación
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to="/COONADOC/noticias" className="navbar__link">
+              <NavLink to="/Home/noticias" className="navbar__link">
                 Noticias
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to="/COONADOC/contacto" className="navbar__link">
+              <NavLink to="/Home/contacto" className="navbar__link">
                 Contacto
+              </NavLink>
+            </li>
+            <li className="navbar__item">
+              <NavLink to="/Login" className="navbar__link">
+                Login
               </NavLink>
             </li>
           </ul>

@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.login-page {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .svg-deco {
+    position: absolute;
+    z-index: 0;
+    animation: floatEnhanced 8s ease-in-out infinite;
+
+    &.svg-top-left {
+      top: 0;
+      left: 0;
+      animation-delay: 1s;
+    }
+
+    &.svg-bottom-right {
+      bottom: 0;
+      right: 0;
+      animation-delay: 3s;
+    }
+  }
+
+  @keyframes floatEnhanced {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate(15px, -20px) rotate(2deg) scale(1.02);
+    }
+    50% {
+      transform: translate(-10px, 10px) rotate(-2deg) scale(1);
+    }
+    75% {
+      transform: translate(10px, -15px) rotate(1deg) scale(1.01);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+  }
+
+
+  .outer-container {
+    background: white;
+    display: flex;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    gap: 20px;
+    width: 90%; // Ancho del contenedor principal
+    height: 85%; // Altura del contenedor principal
+    z-index: 1;
+
+    .login-container {
+      flex: 0.6;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+
+      .box-login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 20px 45px #f7941d22;
+        width: 100%;
+        max-width: 420px; // Puedes ajustar el ancho máximo de la caja.
+        background-color: #f7941d22; // Fondo sutil para la nueva caja.
+      }
+
+      .logo {
+        width: 178px;
+        margin-bottom: -6px;
+      }
+
+      .bienvenido {
+        font-size: 26px;
+        color: #22B222;
+        margin-bottom: 20px;
+      }
+
+      .input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 12px;
+        background: #f7941d;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 12px;
+        cursor: pointer;
+
+        &:hover {
+          background: #e67e22;
+        }
+      }
+
+      .footer-login {
+        font-size: 12px;
+        color: #888;
+        margin-top: 18px;
+      }
+    }
+
+    .carousel-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 15px;
+
+      .carousel-box {
+        width: 87%; // Puedes ajustar este ancho como quieras
+        height: 80%; // O cualquier otra altura deseada
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 20px 45px #00924533;
+
+        .carousel {
+          display: flex;
+          height: 100%;
+          transition: transform 0.5s ease-in-out;
+
+          .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    .outer-container {
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+
+      .carousel-container,
+      .login-container {
+        flex: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.back-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(-4px);
+    color: #f7941d;
+  }
+}
+

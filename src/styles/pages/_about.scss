@@ -355,3 +355,28 @@
     margin-bottom: 0;
   }
 }
+
+.btn-ver-video {
+  margin-top: 1em;
+  margin-left: 16px;
+  padding: 0.75em 1.5em;
+  height: auto;
+  background-color: #f7941d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

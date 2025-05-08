@@ -1,0 +1,135 @@
+$green: #43a047;
+$orange: #fb8c00;
+
+/* Animación de desvanecimiento */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+  
+  /* Animación de desvanecimiento (fade) */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* Loader Container */
+  .loader-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  
+  /* Loader Ring */
+  .loader-ring {
+    position: relative;
+    width: 190px;
+    height: 190px;
+  
+    .rotating-ring {
+      position: absolute;
+      box-sizing: border-box;
+  
+      &.clockwise {
+        width: 175px;
+        height: 175px;
+        top: 7.5px;
+        left: 7.5px;
+        animation: spin 2s linear infinite;
+  
+        .half-ring.orange {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          border: 10px solid transparent;
+          border-radius: 50%;
+        
+          &:first-child {
+            border-top-color: $orange;
+            transform: rotate(45deg);
+          }
+        
+          &:last-child {
+            border-bottom-color: $orange;
+            transform: rotate(225deg);
+          }
+        }
+      }
+  
+      &.counter-clockwise {
+        width: 145px;
+        height: 145px;
+        top: 22.5px;
+        left: 22.5px;
+        animation: spin-reverse 2s linear infinite;
+  
+        .half-ring.green {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          border: 10px solid transparent;
+          border-radius: 50%;
+  
+          &:first-child {
+            border-top-color: $green;
+            transform: rotate(-45deg);
+          }
+  
+          &:last-child {
+            border-bottom-color: $green;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  
+    .logo-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 110px;
+      height: 110px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .logo {
+        width: 95%;
+        height: 95%;
+        object-fit: contain;
+      }
+    }
+  }
+  
+  /* Animaciones de rotación */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin-reverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+  

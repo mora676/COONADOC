@@ -6,12 +6,14 @@
 // Importar componentes y páginas
 @use './components/navbar';
 @use './components/footer';
+@use './components/loadermodule';
 @use './pages/home';
 @use './pages/about';
 @use './pages/affiliation';
 @use './pages/documents';
 @use './pages/news';
 @use './pages/contact';
+@use './pages/login';
 
 // Reset básico y estilos globales
 *, *::before, *::after {
