@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Footer from '../components/Footer';
 const Documents = () => {
   // Estado para filtrar documentos por categoría
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -352,6 +352,7 @@ const Documents = () => {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

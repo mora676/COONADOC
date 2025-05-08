@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Footer from '../components/Footer';
 const Contact = () => {
   // Estado para el formulario
   const [formData, setFormData] = useState({
@@ -409,6 +409,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

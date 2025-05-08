@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Affiliation = () => {
   return (
@@ -494,6 +495,7 @@ const Affiliation = () => {
           <Link to="/contacto" className="btn btn--light">Contactar ahora</Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
