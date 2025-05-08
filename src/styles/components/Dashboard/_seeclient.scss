@@ -1,0 +1,73 @@
+$verde-claro: #22CC23;
+$verde-oscuro: #22B222;
+$naranja-claro: #FFA420;
+$naranja-oscuro: #FF5400; // R255 G84 B0
+
+.box-to-container-main {
+  background-color: white;
+  width: 95%;
+  max-width: 1200px;
+  height: 610px; /* Alto fijo */
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-attachment: fixed; /* Fondo fijo */
+}
+
+.table-custom {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  thead {
+    background-color: $verde-oscuro;
+    color: white;
+    text-align: center;
+  }
+
+  th, td {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  .btn-atender {
+    background-color: $verde-oscuro;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: darken($verde-oscuro, 10%);
+    }
+
+    &:disabled {
+      background-color: $verde-claro;
+      color: white;
+      cursor: not-allowed;
+    }
+  }
+
+  .badge-pendiente {
+    background-color: $naranja-oscuro;
+    color: black;
+    font-size: 0.9rem;
+    padding: 0.3em 0.7em;
+    border-radius: 0.5rem;
+  }
+
+  .badge-atendido {
+    background-color: $verde-claro;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.3em 0.7em;
+    border-radius: 0.5rem;
+  }
+}

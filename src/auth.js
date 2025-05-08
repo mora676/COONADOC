@@ -1,7 +1,7 @@
 // src/auth.js
 
 export function login(email, password) {
-    if (email === 'admin@cconadoc.com' && password === '123456') {
+    if (email === 'admin@con.com' && password === '123456') {
       localStorage.setItem('auth', 'true');
       return true;
     }

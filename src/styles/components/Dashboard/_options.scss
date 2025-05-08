@@ -1,0 +1,35 @@
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 2em;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em; // Espaciado entre íconos
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+
+    i {
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    &:hover i {
+      color: #1fc93e;
+      transform: scale(1.2);
+    }
+
+    &.active i {
+      color: #ffa620;
+    }
+  }
+}

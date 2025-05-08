@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import logo from "/images/Logo.svg";
 import img1 from "/images/37933187_1072728609550584_4171040820742324224_n.jpg";
@@ -12,6 +13,8 @@ const Login = ({ setAuth }) => {
   const [index, setIndex] = useState(0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +26,7 @@ const Login = ({ setAuth }) => {
   const handleLogin = () => {
     if (login(email, password)) {
       setAuth(true);
+      navigate("/dashboard"); // Redirige al dashboard si es exitoso
     } else {
       alert("Credenciales incorrectas");
     }

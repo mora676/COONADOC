@@ -1,0 +1,75 @@
+@use '../variables' as *;
+
+$blanco: #FFFFFF;
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // Altura de la ventana completa
+  position: relative;
+
+  .box-1-dash {
+    height: 10vh;
+    /* Se mantiene proporcional a la pantalla */
+    background: linear-gradient(to right, #22CC23, #FFA420);
+  }
+
+  .box-2-dash {
+    flex-grow: 1; // Ocupa el espacio restante
+    background-color: $blanco;
+    position: relative;
+  }
+
+  .centered-component {
+    position: absolute;
+    top: 44%; // Centrado vertical
+    left: 50%; // Centrado horizontal
+    transform: translate(-50%, -50%); // Ajuste para centrar exactamente
+
+    width: 95%; // Usamos el 80% del ancho disponible
+    max-width: 95%; // Aumenta el tamaño máximo para hacerlo más grande
+    min-height: 94vh; // Aumenta la altura mínima a un 45% de la pantalla
+
+    display: flex; // Usamos flex para organizar los hijos horizontalmente
+    flex-direction: row; // Asegura que los componentes estén en fila
+
+    .component-options {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background-color: rgb(239, 239, 239);
+      width: 5%;
+      z-index: 2;
+      // Elimina sombra izquierda (ya no usamos 10px horizontal)
+      // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .component-divition {
+      background-color: rgba(0, 255, 255, 0);
+      width: 0.3%;
+    }
+
+    .component-children {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: rgb(239, 239, 239);
+      width: 94.7%;
+      z-index: 2;
+
+      // Elimina sombra derecha
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.107),
+        0 10px 30px rgba(0, 0, 0, 0.056);
+    }
+
+    text-align: center;
+
+    @media (max-width: 768px) {
+      width: 90%; // En pantallas más pequeñas, el ancho se reduce
+      min-height: 40vh; // La altura mínima también se ajusta
+    }
+
+    @media (max-width: 480px) {
+      width: 95%; // Aún más pequeño en pantallas muy pequeñas
+      padding: 2em; // Reduce el padding
+    }
+  }
+}

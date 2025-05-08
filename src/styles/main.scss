@@ -6,7 +6,10 @@
 // Importar componentes y páginas
 @use './components/navbar';
 @use './components/footer';
-@use './components/loadermodule';
+@use './components/loadermodule'; 
+@use './components/dashboardLayout'; 
+@use './components/Dashboard/options'; 
+@use './components/Dashboard/seeclient'; 
 @use './pages/home';
 @use './pages/about';
 @use './pages/affiliation';
