@@ -73,7 +73,7 @@ const Affiliation = () => {
           </div>
           
           <div className="affiliation-requirements__action">
-            <a href="/documents/formulario-afiliacion.pdf" className="btn btn--primary" download>
+            <a href="/documents/Formato solicitud de asociación.pdf" className="btn btn--primary" download>
               Descargar Formulario de Afiliación
             </a>
           </div>
@@ -405,7 +405,7 @@ const Affiliation = () => {
           </div>
           
           <div className="agreements__more">
-            <Link to="/afiliacion-servicios/convenios" className="btn btn--secondary">
+            <Link to="/Home/afiliacion-servicios/convenios" className="btn btn--secondary">
               Ver todos los convenios
             </Link>
           </div>
@@ -428,9 +428,9 @@ const Affiliation = () => {
               <div className="relevant-documents__content">
                 <h3 className="relevant-documents__title">Formulario de Afiliación</h3>
                 <p className="relevant-documents__desc">
-                  Documento requerido para iniciar el proceso de afiliación a la cooperativa.
+                  Documento requerido para iniciar el proceso de afiliación a la cooperativa o de Actualización de datos.
                 </p>
-                <a href="/documents/formulario-afiliacion.pdf" className="btn btn--primary btn--sm" download>
+                <a href="/documents/Formato solicitud de asociación.pdf" className="btn btn--primary btn--sm" download>
                   Descargar PDF
                 </a>
               </div>
@@ -445,7 +445,7 @@ const Affiliation = () => {
                 <p className="relevant-documents__desc">
                   Formulario para solicitar cualquier línea de crédito ofrecida por COONADOC.
                 </p>
-                <a href="/documents/solicitud-credito.pdf" className="btn btn--primary btn--sm" download>
+                <a href="/documents/Formato SOLICITUD DE CREDITO.pdf" className="btn btn--primary btn--sm" download>
                   Descargar PDF
                 </a>
               </div>
@@ -456,11 +456,11 @@ const Affiliation = () => {
                 <i className="fas fa-file-pdf"></i>
               </div>
               <div className="relevant-documents__content">
-                <h3 className="relevant-documents__title">Reglamento de Crédito</h3>
+                <h3 className="relevant-documents__title">Formato de Autorizacion de descuento por aportes</h3>
                 <p className="relevant-documents__desc">
-                  Documento que establece las políticas y condiciones para acceder a los créditos.
+                  Formulario para autorizar el descuento por nómina a favor de COONADOC.
                 </p>
-                <a href="/documents/reglamento-credito.pdf" className="btn btn--primary btn--sm" download>
+                <a href="/documents/SED APORTES.pdf" className="btn btn--primary btn--sm" download>
                   Descargar PDF
                 </a>
               </div>
@@ -471,11 +471,11 @@ const Affiliation = () => {
                 <i className="fas fa-file-pdf"></i>
               </div>
               <div className="relevant-documents__content">
-                <h3 className="relevant-documents__title">Formato de Actualización de Datos</h3>
+                <h3 className="relevant-documents__title">Formato de Autorizacion de descuento por servicios</h3>
                 <p className="relevant-documents__desc">
-                  Documento para mantener actualizada tu información personal y de contacto.
+                  Formulario para autorizar el descuento por convenio a favor de COONADOC.
                 </p>
-                <a href="/documents/actualizacion-datos.pdf" className="btn btn--primary btn--sm" download>
+                <a href="/documents/SED SERVICIOS .pdf" className="btn btn--primary btn--sm" download>
                   Descargar PDF
                 </a>
               </div>

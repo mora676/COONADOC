@@ -118,7 +118,7 @@ const Home = () => {
           </div>
           
           <div className="news__more">
-            <Link to="/COONADOC/noticias" className="btn btn--secondary">Ver todas las noticias</Link>
+            <Link to="/Home/noticias" className="btn btn--secondary">Ver todas las noticias</Link>
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@ const Home = () => {
           <p className="cta__text">
             Únete a nuestra cooperativa y disfruta de todos los beneficios que tenemos para ti y tu familia.
           </p>
-          <Link to="/COONADOC/afiliacion-servicios" className="btn btn--light">Afiliate ahora</Link>
+          <Link to="/Home/afiliacion-servicios" className="btn btn--light">Afiliate ahora</Link>
         </div>
       </section>
       
