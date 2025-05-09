@@ -1,10 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Affiliation = () => {
+  const [showAllCredits, setShowAllCredits] = useState(false);
+
+  const toggleCreditTypes = () => {
+    setShowAllCredits(!showAllCredits);
+  };
+
+  useEffect(() => {
+    const hiddenCredits = document.querySelectorAll('.hidden-credit');
+    if (showAllCredits) {
+      hiddenCredits.forEach(item => {
+        item.style.display = 'block';
+      });
+    } else {
+      hiddenCredits.forEach(item => {
+        item.style.display = 'none';
+      });
+    }
+  }, [showAllCredits]);
+
   return (
     <div className="affiliation">
+      <style>
+        {`
+        .hidden-credit {
+          display: none;
+          animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .credit-types__action {
+          display: flex;
+          gap: 15px;
+          justify-content: center;
+          margin-top: 40px;
+        }
+        
+        .credit-types__action .btn {
+          min-width: 180px;
+          padding: 10px 15px !important;
+          font-size: 16px !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          height: 45px !important;
+          border-radius: 4px !important;
+          text-decoration: none !important;
+          border: none !important;
+          cursor: pointer !important;
+          transition: all 0.3s ease;
+          line-height: 1 !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+          font-weight: 500 !important;
+        }
+        
+        .btn--primary {
+          background-color: #00b341 !important;
+          color: white !important;
+        }
+        
+        .btn--secondary {
+          background-color: #FF9933 !important;
+          color: white !important;
+        }
+        `}
+      </style>
+      
       {/* Banner */}
       <section className="page-banner">
         <div className="page-banner__container">
@@ -48,7 +117,7 @@ const Affiliation = () => {
               </div>
             </div>
             
-            <div className="affiliation-requirements__item">lll
+            <div className="affiliation-requirements__item">
               <div className="affiliation-requirements__icon">
                 <i className="fas fa-coins"></i>
               </div>
@@ -151,21 +220,21 @@ const Affiliation = () => {
             En COONADOC ofrecemos diferentes líneas de crédito diseñadas para satisfacer tus necesidades:
           </p>
           
-          <div className="credit-types__grid">
+          <div className="credit-types__grid" id="credit-types-grid">
             <div className="credit-types__item">
               <div className="credit-types__icon">
-                <i className="fas fa-home"></i>
+                <i className="fas fa-money-bill"></i>
               </div>
-              <h3 className="credit-types__title">Crédito de Vivienda</h3>
+              <h3 className="credit-types__title">Crédito de consumo</h3>
               <p className="credit-types__text">
-                Financia la compra, construcción o mejora de tu vivienda con tasas preferenciales y plazos hasta de 15 años.
+              Destinada a satisfacer múltiples necesidades del asociado y su grupo familiar sin necesidad de demostrar su aplicación o destino.
               </p>
               <ul className="credit-types__features">
-                <li>Tasa desde 0.8% mensual</li>
-                <li>Monto hasta 150 SMMLV</li>
-                <li>Plazo hasta 180 meses</li>
+                <li>Apalancamiento: hasta 10 veces los aportes</li>
+                <li>Plazo máximo: 60 meses por nómina y ventanilla</li>
+                <li>Amortización: cuota mensual fija</li>
               </ul>
-              <Link to="/afiliacion-servicios/credito-vivienda" className="credit-types__link">
+              <Link to="/afiliacion-servicios/credito-consumo" className="credit-types__link">
                 Más información
               </Link>
             </div>
@@ -176,12 +245,13 @@ const Affiliation = () => {
               </div>
               <h3 className="credit-types__title">Crédito Educativo</h3>
               <p className="credit-types__text">
-                Invierte en tu futuro y el de tu familia financiando estudios de pregrado, posgrado o educación continua.
+              Con destino a invertir en educación superior del asociado, cónyuge e hijos.
               </p>
               <ul className="credit-types__features">
-                <li>Tasa desde 0.7% mensual</li>
-                <li>Monto hasta 80 SMMLV</li>
-                <li>Plazo hasta 60 meses</li>
+                <li>Crédito por el valor de la orden de matrícula sin exceder 18 SMMLV</li>
+                <li>Apalancamiento: hasta 10 veces los aportes</li>
+                <li>Plazo máximo: 30 meses</li>
+                <li>Amortización: cuota mensual fija</li>
               </ul>
               <Link to="/afiliacion-servicios/credito-educativo" className="credit-types__link">
                 Más información
@@ -190,18 +260,18 @@ const Affiliation = () => {
             
             <div className="credit-types__item">
               <div className="credit-types__icon">
-                <i className="fas fa-car"></i>
+                <i className="fas fa-plane"></i>
               </div>
-              <h3 className="credit-types__title">Crédito de Vehículo</h3>
+              <h3 className="credit-types__title">Crédito de recreación y turismo</h3>
               <p className="credit-types__text">
-                Adquiere vehículo nuevo o usado con excelentes condiciones de financiamiento y seguros incluidos.
+              Para viajes nacionales e internacionales promovidos por Coonadoc de forma directa o través de sus convenios.
               </p>
               <ul className="credit-types__features">
-                <li>Tasa desde 0.9% mensual</li>
-                <li>Monto hasta 100 SMMLV</li>
-                <li>Plazo hasta 72 meses</li>
+                <li>Apalancamiento: hasta 10 veces los aportes</li>
+                <li>Plazo máximo: 48 meses por ventanilla y 60 meses por nomina</li>
+                <li>Amortización: cuota mensual fija</li>
               </ul>
-              <Link to="/afiliacion-servicios/credito-vehiculo" className="credit-types__link">
+              <Link to="/afiliacion-servicios/credito-recreacion-turismo" className="credit-types__link">
                 Más información
               </Link>
             </div>
@@ -210,23 +280,150 @@ const Affiliation = () => {
               <div className="credit-types__icon">
                 <i className="fas fa-hand-holding-usd"></i>
               </div>
-              <h3 className="credit-types__title">Crédito de Libre Inversión</h3>
+              <h3 className="credit-types__title">Crédito de vinculación</h3>
               <p className="credit-types__text">
-                Financia tus proyectos personales, viajes, electrodomésticos o cualquier necesidad que tengas.
+              Incentivar el uso de los productos de COONADOC en los nuevos asociados y conocer su hábito de pago.
               </p>
               <ul className="credit-types__features">
-                <li>Tasa desde 1.0% mensual</li>
-                <li>Monto hasta 50 SMMLV</li>
-                <li>Plazo hasta 48 meses</li>
+                <li>Apalancamiento: hasta 10 veces los aportes</li>
+                <li>Monto máximo: $3.000.000</li>
+                <li>Plazo máximo: 24 meses</li>
+                <li>Amortización: cuota mensual fija</li>
               </ul>
-              <Link to="/afiliacion-servicios/credito-libre-inversion" className="credit-types__link">
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-home"></i>
+              </div>
+              <h3 className="credit-types__title">Crédito de vivienda:</h3>
+              <p className="credit-types__text">
+              Destino a la adquisición de vivienda o del terreno para su construcción y la compra de cartera hipotecaria.
+              </p>
+              <ul className="credit-types__features">
+                <li>Apalancamiento: sin apalancamiento</li>
+                <li>Montos: mínimo $30.000.000 y máximo 70 SMMLV.</li>
+                <li>Plazo máximo: 84 meses</li>
+                <li>Amortización: cuota mensual fija</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-paint-brush"></i>
+              </div>
+              <h3 className="credit-types__title">Créditos para arreglos locativos</h3>
+              <p className="credit-types__text">
+              Cuya finalidad será realizar arreglos locativos, está condicionado al presupuesto de obra que se realice.
+              </p>
+              <ul className="credit-types__features">
+                <li>Apalancamiento: Sin apalancamiento para pagos por nómina, para pagos por ventanilla de acuerdo con la calificación del asociado y hasta 10 veces los aportes.</li>
+                <li>mínimo $ 8.000.000 y máximo: $ 20.000.000</li>
+                <li>Plazo máximo: 60 meses</li>
+                <li>Amortización: cuota mensual fija</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-briefcase"></i>
+              </div>
+              <h3 className="credit-types__title">Crédito de compra de cartera</h3>
+              <p className="credit-types__text">
+              cuya finalidad sea mejorar la liquidez del asociado unificando sus obligaciones financieras.
+              </p>
+              <ul className="credit-types__features">
+                <li>Apalancamiento: Para créditos por nómina hasta 20 veces los aportes
+                Para créditos por ventanilla hasta 10 veces los aportes</li>
+                <li>Monto máximo: $50.000.000</li>
+                <li>Plazo máximo: 60 meses</li>
+                <li>Amortización: cuota mensual fija</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-id-card"></i>
+              </div>
+              <h3 className="credit-types__title">Crédito hasta los aportes</h3>
+              <p className="credit-types__text">
+              Destinado a solucionar las necesidades inmediatas de liquidez del asociado y evitar el retiro por este concepto.
+              </p>
+              <ul className="credit-types__features">
+                <li>Monto máximo: hasta el 95% de los aportes</li>
+                <li>Plazo máximo: 60 meses</li>
+                <li>Amortización: cuota mensual fija</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-toggle-on"></i>
+              </div>
+              <h3 className="credit-types__title">Crédito online</h3>
+              <p className="credit-types__text">
+              Responde a las necesidades de los asociados que se encuentran en lugares lejanos a nuestra cooperativa, a asociados que se les hace difícil asistir a la sede, se trabaja además como innovación tecnológica.
+              </p>
+              <ul className="credit-types__features">
+                <li>Con apalancamiento y hasta 10 veces los aportes</li>
+                <li>Monto máximo: $10.000.000</li>
+                <li>Plazo máximo: 48 meses por ventanilla y 60 por nómina.</li>
+                <li>Tasa de interés: 0,8 %</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
+                Más información
+              </Link>
+            </div>
+
+            <div className="credit-types__item hidden-credit">
+              <div className="credit-types__icon">
+                <i className="fas fa-star"></i>
+              </div>
+              <h3 className="credit-types__title">Crédito de Fidelidad</h3>
+              <p className="credit-types__text">
+                Dirigido a asociados cuyo monto de aportes es superioro igual a $10.000.000 con condiciones preferenciales por su fidelidad de ahorro.
+              </p>
+              <ul className="credit-types__features">
+                <li>Apalancamiento: hasta 2 veces los aportes</li>
+                <li>Solo puede tener un crédito por esta misma línea de forma simultánea</li>
+                <li>Plazo máximo: 48 meses por ventanilla y 60 por nómina.</li>
+                <li>Tasa de interés: 0,5 %</li>
+              </ul>
+              <Link to="/afiliacion-servicios/credito-vinculacion" className="credit-types__link">
                 Más información
               </Link>
             </div>
           </div>
           
           <div className="credit-types__action">
-            <Link to="/afiliacion-servicios/simulador" className="btn btn--primary">
+            <button 
+              onClick={toggleCreditTypes} 
+              id="show-credits-btn" 
+              className="btn btn--secondary"
+              style={{height: '45px', padding: '10px 15px'}}
+            >
+              {showAllCredits ? 'Mostrar menos créditos' : 'Ver todos los créditos'}
+            </button>
+            <Link 
+              to="/afiliacion-servicios/simulador" 
+              className="btn btn--primary"
+              style={{height: '45px', padding: '10px 15px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}
+            >
               Simular un Crédito
             </Link>
           </div>
