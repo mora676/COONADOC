@@ -432,22 +432,24 @@
 
 // Botón de WhatsApp
 .btn--whatsapp {
-  display: inline-flex;
-  align-items: center;
-  background-color: #25D366; // Color oficial de WhatsApp
-  color: $white;
-  padding: $spacing-sm $spacing-md;
-  border-radius: $border-radius-md;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color $transition-fast;
+  display: inline-flex !important;
+  align-items: center !important;
+  background-color: #25D366 !important; // Color oficial de WhatsApp
+  color: $white !important;
+  padding: $spacing-sm $spacing-md !important;
+  border-radius: $border-radius-md !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: background-color $transition-fast !important;
+  border: none !important;
   
   i {
-    font-size: 1.25rem;
-    margin-right: $spacing-sm;
+    font-size: 1.25rem !important;
+    margin-right: $spacing-sm !important;
   }
   
   &:hover {
-    background-color: color.adjust(#25D366, $lightness: -10%);
+    background-color: color.adjust(#25D366, $lightness: -10%) !important;
+    color: $white !important;
   }
 }

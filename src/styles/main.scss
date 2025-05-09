@@ -156,61 +156,84 @@ img {
 
 // Botones
 .btn {
-  display: inline-block;
-  padding: $spacing-sm $spacing-lg;
-  border-radius: $border-radius-md;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all $transition-fast;
+  display: inline-block !important;
+  padding: $spacing-sm $spacing-lg !important;
+  border-radius: $border-radius-md !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: all $transition-fast !important;
   
   @include responsive(xl) {
-    padding: $spacing-md $spacing-xl;
-    font-size: $font-size-md;
+    padding: $spacing-md $spacing-xl !important;
+    font-size: $font-size-md !important;
   }
   
   &--primary {
-    background-color: $verde-claro;
-    color: $white;
+    background-color: $verde-claro !important;
+    color: $white !important;
+    border: none !important;
     
     &:hover {
-      background-color: color.adjust($verde-claro, $lightness: -10%);
+      background-color: color.adjust($verde-claro, $lightness: -10%) !important;
+      color: $white !important;
     }
   }
   
   &--secondary {
-    background-color: $naranja-claro;
-    color: $white;
+    background-color: $naranja-claro !important;
+    color: $white !important;
+    border: none !important;
     
     &:hover {
-      background-color: color.adjust($naranja-claro, $lightness: -10%);
+      background-color: color.adjust($naranja-claro, $lightness: -10%) !important;
+      color: $white !important;
     }
   }
   
   &--light {
-    background-color: $white;
-    color: $verde-oscuro;
+    background-color: $white !important;
+    color: $verde-oscuro !important;
+    border: none !important;
     
     &:hover {
-      background-color: $gray-light;
+      background-color: $gray-light !important;
+      color: $verde-oscuro !important;
     }
   }
   
   &--outline {
-    background-color: transparent;
-    border: 2px solid $verde-claro;
-    color: $verde-claro;
+    background-color: transparent !important;
+    border: 2px solid $verde-claro !important;
+    color: $verde-claro !important;
     
     &:hover {
-      background-color: $verde-claro;
-      color: $white;
+      background-color: $verde-claro !important;
+      color: $white !important;
+    }
+  }
+  
+  &--whatsapp {
+    display: inline-flex !important;
+    align-items: center !important;
+    background-color: #25D366 !important; // Color oficial de WhatsApp
+    color: $white !important;
+    border: none !important;
+    
+    i {
+      margin-right: $spacing-sm !important;
+    }
+    
+    &:hover {
+      background-color: color.adjust(#25D366, $lightness: -10%) !important;
+      color: $white !important;
     }
   }
   
   &--sm {
-    padding: $spacing-xs $spacing-md;
-    font-size: $font-size-sm;
+    padding: $spacing-xs $spacing-md !important;
+    font-size: $font-size-sm !important;
   }
 }
 
