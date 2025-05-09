@@ -55,7 +55,7 @@ const AboutUs = () => {
               </div>
               <h2 className="mission-vision__title">Misión</h2>
               <p className="mission-vision__text">
-                Somos una cooperativa comprometida con el bienestar integral y el mejoramiento de la calidad de vida de los docentes y sus familias, ofreciendo servicios financieros y sociales de calidad, con un enfoque en la educación, la solidaridad y el desarrollo sostenible.
+              Somos una cooperativa de aportes y crédito que cuenta con talento humano idóneo, entrega servicios integrales de aporte y crédito de manera socialmente responsable, sostenible que genera una rentabilidad superior para fortalecer patrimonio y brindar bienestar a través de excedentes cooperativos que beneficien a todos sus asociados a sus familias y a la comunidad en general.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ const AboutUs = () => {
               </div>
               <h2 className="mission-vision__title">Visión</h2>
               <p className="mission-vision__text">
-                Para el 2030, COONADOC será reconocida como la cooperativa líder en el sector educativo a nivel nacional, destacándose por su innovación, sostenibilidad, impacto social y excelencia en el servicio, contribuyendo significativamente al desarrollo integral de sus afiliados y de la comunidad.
+              COONADOC, para el año 2025, incrementará, a través de la gestión social, generando transformación de vida, con las politicas del buen-vivir y el bien-estar, siguiendo los principios del cooperativismo.
               </p>
             </div>
           </div>

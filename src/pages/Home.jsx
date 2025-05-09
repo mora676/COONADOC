@@ -11,7 +11,7 @@ const Home = () => {
         <div className="banner__container">
           <h1 className="banner__title">Bienvenido a COONADOC</h1>
           <p className="banner__text">
-            Cooperativa Nacional de Docentes - Comprometidos con el bienestar y progreso de nuestros afiliados.
+            Cooperativa Nacional de Docentes - Una cooperativa de docentes y sus familias que desarrolla un modelo solidario orientado a mejorar la calidad de vida de sus asociados.
           </p>
           <Link to="/Home/afiliacion-servicios" className="btn btn--primary">
             Conoce nuestros servicios
