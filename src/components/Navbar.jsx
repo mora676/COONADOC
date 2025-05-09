@@ -8,10 +8,14 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <NavLink to="/Home" className="navbar__logo">
+        <NavLink to="/Home" className="navbar__logo" onClick={closeMenu}>
           <img src="/images/Logo.svg" alt="coonadoc-front Logo" />
         </NavLink>
 
@@ -22,6 +26,7 @@ const Navbar = () => {
                 to="/Home/" 
                 className="navbar__link"
                 end
+                onClick={closeMenu}
               >
                 Inicio
               </NavLink>
@@ -30,6 +35,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/quienes-somos" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Quiénes Somos
               </NavLink>
@@ -38,6 +44,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/afiliacion-servicios" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Afiliación y Servicios
               </NavLink>
@@ -46,6 +53,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/documentacion" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Documentación
               </NavLink>
@@ -54,6 +62,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/noticias" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Noticias
               </NavLink>
@@ -62,6 +71,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/contacto" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Contacto
               </NavLink>
@@ -70,6 +80,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Login" 
                 className="navbar__link"
+                onClick={closeMenu}
               >
                 Login
               </NavLink>
