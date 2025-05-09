@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <div className="contact">
       {/* Banner */}
-      <section className="page-banner">
+      <section className="page-banner" id="contact-banner">
         <div className="page-banner__container">
           <h1 className="page-banner__title">Contacto y Soporte</h1>
           <p className="page-banner__text">

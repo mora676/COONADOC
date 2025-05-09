@@ -125,7 +125,7 @@ const News = () => {
   return (
     <div className="news-page">
       {/* Banner */}
-      <section className="page-banner">
+      <section className="page-banner" id="news-banner">
         <div className="page-banner__container">
           <h1 className="page-banner__title">Noticias y Blog</h1>
           <p className="page-banner__text">

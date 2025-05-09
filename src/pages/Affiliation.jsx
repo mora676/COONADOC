@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import Footer from '../components/Footer';
 
 const Affiliation = () => {
@@ -75,7 +76,7 @@ const Affiliation = () => {
       </style>
       
       {/* Banner */}
-      <section className="page-banner">
+      <section className="page-banner" id="affiliation-banner">
         <div className="page-banner__container">
           <h1 className="page-banner__title">Afiliación y Servicios</h1>
           <p className="page-banner__text">
@@ -213,7 +214,7 @@ const Affiliation = () => {
       </section>
 
       {/* Tipos de Crédito */}
-      <section className="section credit-types">
+      <section className="section credit-types" id="credit-types">
         <div className="section__container">
           <h2 className="section__title">Tipos de Crédito</h2>
           <p className="credit-types__intro">
@@ -431,7 +432,7 @@ const Affiliation = () => {
       </section>
 
       {/* Seguros y Beneficios */}
-      <section className="section insurance-benefits">
+      <section className="section insurance-benefits" id="insurance-benefits">
         <div className="section__container">
           <h2 className="section__title">Seguros y Beneficios</h2>
           <p className="insurance-benefits__intro">
@@ -533,7 +534,7 @@ const Affiliation = () => {
       </section>
 
       {/* Convenios */}
-      <section className="section agreements">
+      <section className="section agreements" id="agreements">
         <div className="section__container">
           <h2 className="section__title">Convenios con Aliados</h2>
           <p className="agreements__intro">
@@ -689,7 +690,7 @@ const Affiliation = () => {
           <p className="cta__text">
             Inicia tu proceso de afiliación hoy mismo y comienza a disfrutar de todos nuestros beneficios.
           </p>
-          <Link to="/contacto" className="btn btn--light">Contactar ahora</Link>
+          <HashLink smooth to="/Home/contacto#contact-banner" className="btn btn--light">Contactar ahora</HashLink>
         </div>
       </section>
       <Footer />

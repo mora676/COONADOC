@@ -35,6 +35,7 @@ const Navbar = () => {
               <NavLink 
                 to="/Home/quienes-somos" 
                 className="navbar__link"
+                end
                 onClick={closeMenu}
               >
                 Quiénes Somos

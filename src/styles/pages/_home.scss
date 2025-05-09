@@ -73,6 +73,14 @@
     font-size: $font-size-lg;
     margin-bottom: $spacing-sm;
     color: $verde-oscuro;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    
+    &:hover {
+      color: $verde-claro;
+      text-decoration: none;
+    }
     
     @include responsive(xl) {
       font-size: $font-size-xl;

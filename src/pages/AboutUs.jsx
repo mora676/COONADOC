@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import { HashLink } from 'react-router-hash-link';
 
 const AboutUs = () => {
   return (
@@ -276,7 +276,7 @@ const AboutUs = () => {
           <p className="cta__text">
             Contáctanos para resolver tus dudas o programa una visita a nuestras instalaciones.
           </p>
-          <Link to="/COONADOC/contacto" className="btn btn--light">Contactar ahora</Link>
+          <HashLink smooth to="/Home/contacto#contact-banner" className="btn btn--light">Contactar ahora</HashLink>
         </div>
       </section>
       <Footer />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import Footer from '../components/Footer';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
               <div className="benefits__icon">
                 <i className="fas fa-hand-holding-usd"></i>
               </div>
-              <h3 className="benefits__title">Créditos Accesibles</h3>
+              <HashLink smooth to="/Home/afiliacion-servicios#credit-types" className="benefits__title">Créditos Accesibles</HashLink>
               <p className="benefits__text">
                 Ofrecemos diferentes líneas de crédito con tasas preferenciales para nuestros afiliados.
               </p>
@@ -39,7 +40,7 @@ const Home = () => {
               <div className="benefits__icon">
                 <i className="fas fa-shield-alt"></i>
               </div>
-              <h3 className="benefits__title">Seguros Completos</h3>
+              <HashLink smooth to="/Home/afiliacion-servicios#insurance-benefits" className="benefits__title">Seguros Completos</HashLink>
               <p className="benefits__text">
                 Protección para ti y tu familia con nuestros planes de seguro especialmente diseñados.
               </p>
@@ -49,7 +50,7 @@ const Home = () => {
               <div className="benefits__icon">
                 <i className="fas fa-handshake"></i>
               </div>
-              <h3 className="benefits__title">Convenios Exclusivos</h3>
+              <HashLink smooth to="/Home/afiliacion-servicios#agreements" className="benefits__title">Convenios Exclusivos</HashLink>
               <p className="benefits__text">
                 Disfruta de beneficios especiales con nuestros aliados estratégicos en diferentes sectores.
               </p>
@@ -59,7 +60,7 @@ const Home = () => {
               <div className="benefits__icon">
                 <i className="fas fa-graduation-cap"></i>
               </div>
-              <h3 className="benefits__title">Educación Continua</h3>
+              <HashLink smooth to="/Home/afiliacion-servicios" className="benefits__title">Educación Continua</HashLink>
               <p className="benefits__text">
                 Programas de formación y desarrollo profesional para nuestros afiliados y sus familias.
               </p>
@@ -118,7 +119,7 @@ const Home = () => {
           </div>
           
           <div className="news__more">
-            <Link to="/Home/noticias" className="btn btn--secondary">Ver todas las noticias</Link>
+            <HashLink smooth to="/Home/noticias#news-banner" className="btn btn--secondary">Ver todas las noticias</HashLink>
           </div>
         </div>
       </section>
@@ -130,7 +131,7 @@ const Home = () => {
           <p className="cta__text">
             Únete a nuestra cooperativa y disfruta de todos los beneficios que tenemos para ti y tu familia.
           </p>
-          <Link to="/Home/afiliacion-servicios" className="btn btn--light">Afiliate ahora</Link>
+          <HashLink smooth to="/Home/afiliacion-servicios#affiliation-banner" className="btn btn--light">Afiliate ahora</HashLink>
         </div>
       </section>
       
@@ -170,8 +171,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              
-              <Link to="/contacto" className="btn btn--outline">Más información de contacto</Link>
+              <HashLink smooth to="/Home/contacto#contact-banner" className="btn btn--outline">Más información de contacto</HashLink>
             </div>
             
             <div className="contact-quick__map">
